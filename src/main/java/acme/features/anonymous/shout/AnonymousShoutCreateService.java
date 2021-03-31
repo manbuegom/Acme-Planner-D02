@@ -41,11 +41,12 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "moment");
+		request.unbind(entity, model, "moment");
 		
 		
 		if (request.isMethod(HttpMethod.GET)) {
 			model.setAttribute("author", "");
+			model.setAttribute("title", "");
 			model.setAttribute("text", "");
 			model.setAttribute("info", "");
 		} else {

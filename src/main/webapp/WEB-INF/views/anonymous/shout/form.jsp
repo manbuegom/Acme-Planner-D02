@@ -17,9 +17,9 @@
 
 <acme:form>
 	<acme:form-textbox code="anonymous.shout.label.author" path="author" />
-	<acme:form-textbox code="anonymous.shout.label.moment" path="moment" />
-	<acme:form-textbox code="anonymous.shout.label.text" path="text" />
-	<acme:form-textbox code="anonymous.shout.label.info" path="info" />
+	<acme:form-moment code="anonymous.shout.label.moment" path="moment" />
+	<acme:form-textarea code="anonymous.shout.label.text" path="text" />
+	<acme:form-url code="anonymous.shout.label.info" path="info" />
 
 
 	<acme:form-submit code="anonymous.shout.button.create"
