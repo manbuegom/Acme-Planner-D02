@@ -27,6 +27,10 @@ master.menu.sign-out = Sign out
 
 # master.menu.shout #######################################################
 
+master.menu.anonymous.list-shouts = List shouts
+
+# master.menu.shout #######################################################
+
 master.menu.shout = Create shout
 
 # master.menu.task #######################################################

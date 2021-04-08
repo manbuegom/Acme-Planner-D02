@@ -17,11 +17,15 @@ import acme.framework.entities.Anonymous;
 public class AnonymousShoutController extends AbstractController<Anonymous, Shout> {
 
 	@Autowired
+	protected AnonymousShoutListService	listService;
+	
+	@Autowired
 	private AnonymousShoutCreateService createService;
 
 
 	@PostConstruct
 	private void initialise() {
+		super.addBasicCommand(BasicCommand.LIST, this.listService);
 		super.addBasicCommand(BasicCommand.CREATE, this.createService);
 	}
 

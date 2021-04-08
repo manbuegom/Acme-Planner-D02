@@ -18,3 +18,7 @@ anonymous.shout.label.info = Link:
 
 anonymous.shout.button.create = Crear
 anonymous.shout.button.return = Volver
+
+anonymous.shout.list.label.moment = Momento
+anonymous.shout.list.label.author = Autor
+anonymous.shout.list.label.text = Texto
