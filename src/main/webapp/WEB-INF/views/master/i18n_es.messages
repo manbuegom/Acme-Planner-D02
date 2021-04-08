@@ -30,6 +30,10 @@ master.menu.sign-out = Salir
 
 master.menu.shout = Crear shout
 
+# master.menu.task #######################################################
+
+master.menu.task = Crear task
+
 # master.menu.anonymous #######################################################
 
 master.menu.anonymous = Anónimo
