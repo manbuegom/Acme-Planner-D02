@@ -39,5 +39,23 @@
 		<property name="text" value="Prueba de fernando" />
 		<property name="info" value="https://ferki.com" />
 	</bean>
+	
+	<bean id="task01" class="acme.entities.Task">
+		<property name="start" value="2022/02/26 12:30" />
+		<property name="end" value="2022/03/02 12:30"/>
+		<property name="title" value="Tarea de Juan José" />
+		<property name="text" value="Revisar las tareas de Pepe" />
+		<property name="link" value="https://pablete.com" />
+		<property name="visibility" value="false" />
+	</bean>
+	
+	<bean id="task02" class="acme.entities.Task">
+		<property name="start" value="2022/04/26 12:30" />
+		<property name="end" value="2022/04/29 12:30" />
+		<property name="title" value="Tarea de Jose Manuel" />
+		<property name="text" value="Revisar los documentos" />
+		<property name="link" value="https://ferki.com" />
+		<property name="visibility" value="true" />
+	</bean>
 
 </beans>

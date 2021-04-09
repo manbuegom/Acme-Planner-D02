@@ -10,15 +10,11 @@
 
 anonymous.shout.form.title.create = Crear shout
 
-anonymous.shout.label.author = Autor:
-anonymous.shout.label.moment = Fecha:
-anonymous.shout.label.text = Descripcion:
-anonymous.shout.label.info = Link:
+anonymous.shout.label.start = Comienzo:
+anonymous.shout.label.end = Final:
+anonymous.shout.label.title = Titulo:
+anonymous.shout.label.text= Texto:
 
 
 anonymous.shout.button.create = Crear
 anonymous.shout.button.return = Volver
-
-anonymous.shout.list.label.moment = Momento
-anonymous.shout.list.label.author = Autor
-anonymous.shout.list.label.text = Texto
