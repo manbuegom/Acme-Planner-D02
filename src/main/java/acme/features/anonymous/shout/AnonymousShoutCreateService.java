@@ -84,7 +84,7 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		errors.state(request,  textLength >0 && textLength <= 100, "text", "acme.validation.length", 1, 100);
 
 		final int authorLength = request.getModel().getString("author").length();
-		errors.state(request,  authorLength >=5 && authorLength <= 25, "author", "acme.validation.length", 6, 25);
+		errors.state(request,  authorLength >=5 && authorLength <= 25, "author", "acme.validation.length", 5, 25);
 		
 	}
 
