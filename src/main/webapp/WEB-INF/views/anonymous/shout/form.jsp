@@ -17,12 +17,11 @@
 
 <acme:form>
 	<acme:form-textbox code="anonymous.shout.label.author" path="author" />
-	<acme:form-moment code="anonymous.shout.label.moment" path="moment" />
 	<acme:form-textarea code="anonymous.shout.label.text" path="text" />
 	<acme:form-url code="anonymous.shout.label.info" path="info" />
 
 
 	<acme:form-submit code="anonymous.shout.button.create"
-		action="/anonymous/shouts/create" />
+		action="/anonymous/shout/create" />
 	<acme:form-return code="anonymous.shout.button.return" />
 </acme:form>

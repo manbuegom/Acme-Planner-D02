@@ -1,5 +1,7 @@
 package acme.features.anonymous.shout;
 
+import java.util.Date;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -59,9 +61,15 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 	public Shout instantiate(final Request<Shout> request) {
 		assert request != null;
 
+		final Date moment = new Date(System.currentTimeMillis() - 1);
+		
 		Shout result;
 		result = new Shout();
-
+		result.setAuthor("John Doe");
+		result.setText("Lorem ipsum!");
+		result.setMoment(moment);
+		result.setInfo("http://example.org");
+		
 		return result;
 	}
 
@@ -76,7 +84,7 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		errors.state(request,  textLength >0 && textLength <= 100, "text", "acme.validation.length", 1, 100);
 
 		final int authorLength = request.getModel().getString("author").length();
-		errors.state(request,  authorLength >=5 && authorLength <= 25, "author", "acme.validation.length", 6, 25);
+		errors.state(request,  authorLength >=5 && authorLength <= 25, "author", "acme.validation.length", 5, 25);
 		
 	}
 
