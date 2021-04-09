@@ -26,6 +26,10 @@ master.menu.sign-up = Registrarse
 master.menu.sign-in = Entrar
 master.menu.sign-out = Salir
 
+# master.menu.shout #######################################################
+
+master.menu.shout = Crear shout
+
 # master.menu.anonymous #######################################################
 
 master.menu.anonymous = Anónimo
