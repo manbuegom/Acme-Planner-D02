@@ -41,7 +41,7 @@ public class AnonymousTaskCreateService implements AbstractCreateService<Anonymo
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "moment");
+		request.unbind(entity, model, "start", "end", "title", "text");
 		
 		
 		if (request.isMethod(HttpMethod.GET)) {

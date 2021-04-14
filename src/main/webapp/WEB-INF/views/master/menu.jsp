@@ -29,6 +29,8 @@
 		
 		<acme:menu-option code="master.menu.task" access="isAnonymous()" action="/anonymous/tasks/create">
 		</acme:menu-option>
+		<acme:menu-option code="master.menu.task.list" access="isAnonymous()" action="/anonymous/tasks/list"/>
+		
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
 			<acme:menu-suboption code="master.menu.administrator.user-accounts" action="/administrator/user-account/list"/>

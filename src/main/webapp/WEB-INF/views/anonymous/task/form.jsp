@@ -16,13 +16,15 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:form>
-	<acme:form-moment code="anonymous.task.label.start" path="start" />
-	<acme:form-moment code="anonymous.task.label.end" path="end" />
-	<acme:form-textbox code="anonymous.task.label.title" path="title" />
-	<acme:form-textarea code="anonymous.task.label.text" path="text" />
+	<acme:form-moment code="anonymous.tasks.label.start" path="start" />
+	<acme:form-moment code="anonymous.tasks.label.end" path="end" />
+	<acme:form-textbox code="anonymous.tasks.label.title" path="title" />
+	<acme:form-textarea code="anonymous.tasks.label.text" path="text" />
+	<acme:form-url code="anonymous.task.label.info" path="link" />
+    <acme:form-checkbox code="anonymous.task.label.visibility" path="visibility" /> 
 
 
-	<acme:form-submit code="anonymous.task.button.create"
+	<acme:form-submit code="anonymous.tasks.button.create"
 		action="/anonymous/tasks/create" />
-	<acme:form-return code="anonymous.task.button.return" />
+	<acme:form-return code="anonymous.tasks.button.return" />
 </acme:form>

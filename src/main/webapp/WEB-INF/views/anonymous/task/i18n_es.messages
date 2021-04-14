@@ -8,13 +8,13 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-anonymous.shout.form.title.create = Crear shout
+anonymous.tasks.form.title.create = Crear task
 
-anonymous.shout.label.start = Comienzo:
-anonymous.shout.label.end = Final:
-anonymous.shout.label.title = Titulo:
-anonymous.shout.label.text= Texto:
+anonymous.tasks.label.start = Comienzo:
+anonymous.tasks.label.end = Final:
+anonymous.tasks.label.title = Titulo:
+anonymous.tasks.label.text= Texto:
 
 
-anonymous.shout.button.create = Crear
-anonymous.shout.button.return = Volver
+anonymous.tasks.button.create = Crear
+anonymous.tasks.button.return = Volver
