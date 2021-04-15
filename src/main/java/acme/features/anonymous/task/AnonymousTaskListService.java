@@ -40,7 +40,7 @@ public class AnonymousTaskListService implements AbstractListService<Anonymous, 
 
 		Collection<Task> result;
 
-		result = this.repository.findMany();
+		result = this.repository.findPublicTasks();
 
 		return result;
 	}

@@ -6,14 +6,10 @@
 
 <tiles-definitions>
 
-	<definition name="anonymous/shout/form" extends="master">
+	<definition name="administrator/dashboard/show"
+		extends="master">
 		<put-attribute name="body" type="template"
-			value="../anonymous/shout/form.jsp" />
-	</definition>
-
-	<definition name="anonymous/shout/list" extends="master">
-		<put-attribute name="body" type="template"
-			value="../anonymous/shout/list.jsp" />
+			value="../administrator/dashboard/show.jsp" />
 	</definition>
 
 </tiles-definitions>
