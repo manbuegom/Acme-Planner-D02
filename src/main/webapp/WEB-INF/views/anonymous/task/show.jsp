@@ -16,10 +16,13 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:list readonly="true">
-	<acme:list-column code="anonymous.task.label.start" path="start" width="15%"/>
-	<acme:list-column code="anonymous.task.label.end" path="end" width="15%"/>
-	<acme:list-column code="anonymous.task.label.title" path="title" width="70%"/>
-
+	<acme:list-column code="anonymous.task.label.start" path="start"
+		width="15%" />
+	<acme:list-column code="anonymous.task.label.end" path="end"
+		width="15%" />
+	<acme:list-column
+			code="anonymous.task.label.title" path="title" width="70%" />
+	
 </acme:list>
 
 

@@ -37,10 +37,12 @@ public class AnonymousTaskShowService implements AbstractShowService<Anonymous, 
 	@Override
 	public Task findOne(final Request<Task> request) {
 		assert request != null;
+		Task result;
+		Integer id;
+		id = request.getModel().getInteger("id");
+		result = this.repository.findOnebyId(id);
 
-		final Task t = this.repository.findOne(request.getModel().getInteger("id"));
-
-		return t;
+		return result;
 	}
 
 }

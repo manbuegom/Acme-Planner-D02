@@ -18,6 +18,6 @@ public interface AnonymousTaskRepository extends AbstractRepository {
    	Collection<Task> findMany();
 
     @Query("select t from Task t where t.id = ?1")
-    Task findOne(Integer id);
+	Task findOnebyId(Integer id);
 }
 
