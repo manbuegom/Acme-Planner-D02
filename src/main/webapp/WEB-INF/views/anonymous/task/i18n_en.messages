@@ -8,13 +8,15 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-anonymous.tasks.form.title.create = Create task
+anonymous.task.form.title.create = Create task
 
-anonymous.tasks.label.start = Start:
-anonymous.tasks.label.end = End:
-anonymous.tasks.label.title = Title:
-anonymous.tasks.label.text = Text:
+anonymous.task.label.start = Start:
+anonymous.task.label.end = End:
+anonymous.task.label.title = Title:
+anonymous.task.label.text = Text:
+anonymous.task.label.link = Link:
+anonymous.task.label.info = Information:
+anonymous.task.label.visibility= Visibility:
 
-
-anonymous.tasks.button.create = Create
-anonymous.tasks.button.return = Return
+anonymous.task.button.create = Create
+anonymous.task.button.return = Return

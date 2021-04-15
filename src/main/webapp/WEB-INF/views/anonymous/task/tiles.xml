@@ -18,13 +18,18 @@
 
 <tiles-definitions>
 
-	<definition name="anonymous/tasks/form" extends="master">
-		<put-attribute name="body" type="template" value="../anonymous/tasks/form.jsp" />
+	<definition name="anonymous/task/form" extends="master">
+		<put-attribute name="body" type="template" value="../anonymous/task/form.jsp" />
 	</definition>
 	
-	<definition name="anonymous/tasks/list" extends="master">
+	<definition name="anonymous/task/list" extends="master">
 	<put-attribute name="body" type="template"
-		value="../anonymous/tasks/list.jsp" />
+		value="../anonymous/task/list.jsp" />
+	</definition>
+	
+	<definition name="anonymous/task/show" extends="master">
+	<put-attribute name="body" type="template"
+		value="../anonymous/task/show.jsp" />
 	</definition>
 
 </tiles-definitions>
