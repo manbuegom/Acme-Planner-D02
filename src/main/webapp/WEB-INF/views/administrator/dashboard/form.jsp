@@ -16,13 +16,7 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:form>
-
-	<acme:form-textbox code="administrator.dashboard.label.numberOfPublicTasks" path="numberOfPublicTasks" />
-	<acme:form-textarea code="administrator.dashboard.label.numberOfPrivateTasks" path="numberOfPrivateTasks" />
-	<acme:form-url code="administrator.dashboard.label.numberOfFinishedTasks" path="numberOfFinishedTasks" />
-
-
-	<acme:form-submit code="administrator.dashboard.button.create"
-		action="/administrator/dashboard/create" />
-	<acme:form-return code="administrator.dashboard.button.return" />
+	<acme:form-integer code="administrator.dashboard.label.numberOfPublicTasks" path="numberOfPublicTasks" />
+	<acme:form-integer code="administrator.dashboard.label.numberOfPrivateTasks" path="numberOfPrivateTasks" />
+	<acme:form-integer code="administrator.dashboard.label.numberOfFinishedTasks" path="numberOfFinishedTasks" />
 </acme:form>

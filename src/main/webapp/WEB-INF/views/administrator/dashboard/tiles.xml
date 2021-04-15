@@ -6,10 +6,15 @@
 
 <tiles-definitions>
 
-	<definition name="administrator/dashboard/show"
+<!-- 	<definition name="administrator/dashboard/show"
 		extends="master">
 		<put-attribute name="body" type="template"
 			value="../administrator/dashboard/show.jsp" />
-	</definition>
+	</definition> -->
+
+<!-- EL NAME PONIENDO EL SHOW NO FUNCIONA PERO EL FORM SI	  -->
+	<definition name="administrator/dashboard/form" extends="master">
+        <put-attribute name="body" type="template" value="../administrator/dashboard/show.jsp" />
+    </definition>
 
 </tiles-definitions>

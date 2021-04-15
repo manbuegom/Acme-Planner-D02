@@ -42,6 +42,7 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		res.setNumberOfPublicTasks(this.repository.numberOfPublicTasks());
 		res.setNumberOfFinishedTasks(this.repository.numberOfFinishedTasks());
 		res.setNumberOfPrivateTasks(this.repository.numberOfPrivateTasks());
+		res.setId(20);
 
 		return res;
 	}

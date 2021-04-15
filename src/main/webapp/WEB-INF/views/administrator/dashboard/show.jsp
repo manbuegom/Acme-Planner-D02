@@ -15,7 +15,13 @@
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
-<acme:list readonly="true">
+<acme:form>
+	<acme:form-integer code="administrator.dashboard.label.numberOfPublicTasks" path="numberOfPublicTasks" />
+	<acme:form-integer code="administrator.dashboard.label.numberOfPrivateTasks" path="numberOfPrivateTasks" />
+	<acme:form-integer code="administrator.dashboard.label.numberOfFinishedTasks" path="numberOfFinishedTasks" />
+</acme:form>
+
+<%-- <acme:list readonly="true">
 	<acme:list-column
 		code="administrator.dashboard.label.numberOfFinishedTasks"
 		path="numberOfFinishedTasks" width="15%" />
@@ -26,7 +32,7 @@
 		code="administrator.dashboard.label.numberOfPublicTasks"
 		path="numberOfPublicTasks" width="70%" />
 
-</acme:list>
+</acme:list> --%>
 
 
 
