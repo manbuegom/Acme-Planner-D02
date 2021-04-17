@@ -57,5 +57,23 @@
 		<property name="link" value="https://ferki.com" />
 		<property name="visibility" value="true" />
 	</bean>
+	
+		<bean id="task03" class="acme.entities.Task">
+		<property name="start" value="2022/04/26 12:30" />
+		<property name="end" value="2022/04/26 13:30" />
+		<property name="title" value="Primera" />
+		<property name="text" value="Revisar los documentos" />
+		<property name="link" value="https://ferki.com" />
+		<property name="visibility" value="true" />
+	</bean>
+	
+		<bean id="task04" class="acme.entities.Task">
+		<property name="start" value="2022/04/26 12:30" />
+		<property name="end" value="2022/04/26 14:30" />
+		<property name="title" value="Segunda" />
+		<property name="text" value="Revisar los documentos" />
+		<property name="link" value="https://ferki.com" />
+		<property name="visibility" value="true" />
+	</bean>
 
 </beans>

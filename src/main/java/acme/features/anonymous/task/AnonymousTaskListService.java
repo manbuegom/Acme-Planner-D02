@@ -1,6 +1,10 @@
 package acme.features.anonymous.task;
 
+import java.sql.Date;
+import java.time.LocalDate;
 import java.util.Collection;
+import java.util.Comparator;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -31,17 +35,20 @@ public class AnonymousTaskListService implements AbstractListService<Anonymous, 
 		assert entity != null;
 		assert model!= null;
 		
-		request.unbind(entity, model,  "start", "end", "title");
+		request.unbind(entity, model,  "start", "end", "title", "text","link");
 	}
 
 	@Override
 	public Collection<Task> findMany(final Request<Task> request) {
 		assert request != null;
 
-		Collection<Task> result;
-
-		result = this.repository.findMany();
-
+		final Collection<Task> result;
+				
+		final Date date = Date.valueOf(LocalDate.now());
+		
+		//ordena los resultados de mayor a menor carga de workload, si se quiere al reves añadir el .reversed() en el comparator
+		result = this.repository.findPublicTasks(date).stream().sorted(Comparator.comparing(Task::getWorkLoad)).collect(Collectors.toList());
+		
 		return result;
 	}
 
