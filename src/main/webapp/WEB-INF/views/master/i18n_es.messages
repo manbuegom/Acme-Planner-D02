@@ -36,11 +36,14 @@ master.menu.shout = Crear shout
 master.menu.task = Crear task
 master.menu.task.list = Ver tasks
 
+# master.menu.authenticated #######################################################
+master.menu.authenticated = Autenticado
+master.menu.authenticated.list-tasks = Lista de tasks
 # master.menu.anonymous #######################################################
 
 master.menu.anonymous = Anónimo
 master.menu.anonymous.favourite-link = Enlace favorito
-
+master.menu.anonymous.list-shouts = Ver shouts
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrador
