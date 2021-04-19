@@ -10,7 +10,7 @@
 
 # master.banner.welcome #######################################################
 
-master.banner.background = #FFE97F 
+master.banner.background = #FFE97F  
 
 # master.welcome ##############################################################
 
@@ -32,7 +32,7 @@ master.menu.shout = Create shout
 
 # master.menu.task #######################################################
 
-master.menu.task = Create task
+master.menu.task = Create task 
 master.menu.task.list = List tasks
 
 # master.menu.authenticated #######################################################

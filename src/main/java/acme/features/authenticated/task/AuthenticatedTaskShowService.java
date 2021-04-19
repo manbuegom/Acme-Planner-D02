@@ -11,7 +11,7 @@ import acme.framework.services.AbstractShowService;
 
 @Service
 public class AuthenticatedTaskShowService implements AbstractShowService<Authenticated, Task> {
-	
+
 	@Autowired
 	protected AuthenticatedTaskRepository repository;
 	
