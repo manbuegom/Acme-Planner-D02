@@ -33,7 +33,7 @@ master.menu.shout = Create shout
 # master.menu.task #######################################################
 
 master.menu.task = Create task
-master.menu.task.list = Show tasks
+master.menu.task.list = List tasks
 
 # master.menu.authenticated #######################################################
 master.menu.authenticated = Authenticated
