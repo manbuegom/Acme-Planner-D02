@@ -24,12 +24,14 @@
 			<acme:menu-suboption code="master.menu.anonymous.list-shouts" action="/anonymous/shout/list"/>
 		</acme:menu-option>
 		
+
 		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
 			<acme:menu-suboption code="master.menu.athenticated.list-tasks"  action="/authenticated/task/list"/>
 		</acme:menu-option>
 		
 	
 		<acme:menu-option code="master.menu.task" access="isAnonymous()" action="/anonymous/task/create">
+
 		</acme:menu-option>
 		<acme:menu-option code="master.menu.task.list" access="isAnonymous()" action="/anonymous/task/list"/>
 
