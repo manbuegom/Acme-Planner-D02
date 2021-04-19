@@ -15,20 +15,15 @@
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
-<acme:list readonly="true">
+<acme:list>
 <!--  no sabemos aún qué queremos mostrar o no pero cuando en el command metes la accion que se esté realizando muestra o no la columna -->
 <!--	<jstl:if test="${command == 'show'}"> -->
 <!--		</jstl:if> -->
-	<acme:list-column  code="anonymous.task.label.title" path="title" width="20%"/>
-	<acme:list-column code="anonymous.task.label.start" path="start" width="20%"/>
-	<acme:list-column code="anonymous.task.label.end" path="end" width="20%"/>
-	<acme:list-column code="anonymous.task.label.text" path="text" width="20%"/>
-	<acme:list-column code="anonymous.task.label.link" path="link" width="20%"/>
-	
-	
+	<acme:list-column  code="anonymous.task.label.title" path="title" width="80%"/>
 		
-
 </acme:list>
-
+<acme:form>
+<acme:form-return code="anonymous.task.label.details" action= "/anonymous/task/show"/>
+</acme:form>
 
 
