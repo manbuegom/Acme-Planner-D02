@@ -1,4 +1,3 @@
-
 package acme.entities;
 
 import java.time.Period;
@@ -9,13 +8,13 @@ import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.persistence.Transient;
 import javax.validation.constraints.Future;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
+import org.springframework.data.annotation.Transient;
 
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;

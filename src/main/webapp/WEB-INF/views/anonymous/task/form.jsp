@@ -20,9 +20,11 @@
 	<acme:form-moment code="anonymous.task.label.end" path="end" />
 	<acme:form-textbox code="anonymous.task.label.title" path="title" />
 	<acme:form-textarea code="anonymous.task.label.text" path="text" />
+	<acme:form-url code="anonymous.task.label.info" path="link" />
+    <acme:form-checkbox code="anonymous.task.label.visibility" path="visibility" /> 
 
 
 	<acme:form-submit code="anonymous.task.button.create"
-		action="/anonymous/tasks/create" />
+		action="/anonymous/task/create" />
 	<acme:form-return code="anonymous.task.button.return" />
 </acme:form>

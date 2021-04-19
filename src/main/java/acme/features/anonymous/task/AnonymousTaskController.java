@@ -1,4 +1,4 @@
-package acme.features.anonymous.task;
+  package acme.features.anonymous.task;
 
 
 import javax.annotation.PostConstruct;
@@ -13,16 +13,23 @@ import acme.framework.controllers.AbstractController;
 import acme.framework.entities.Anonymous;
 
 @Controller
-@RequestMapping("/anonymous/tasks/")
+@RequestMapping("/anonymous/task/")
 public class AnonymousTaskController extends AbstractController<Anonymous, Task> {
 
+	
+	@Autowired
+	protected AnonymousTaskListService	listService;
+	
 	@Autowired
 	private AnonymousTaskCreateService createService;
-
+	@Autowired
+	private AnonymousTaskShowService showService;
 
 	@PostConstruct
-	private void initialise() {
+	protected void initialise() {
+		super.addBasicCommand(BasicCommand.LIST, this.listService);
 		super.addBasicCommand(BasicCommand.CREATE, this.createService);
+		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 	}
 
 }
