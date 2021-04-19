@@ -23,13 +23,13 @@
 	</definition>
 	
 	<definition name="anonymous/task/list" extends="master">
-	<put-attribute name="body" type="template"
-		value="../anonymous/task/list.jsp" />
+		<put-attribute name="body" type="template"
+			value="../anonymous/task/list.jsp" />
 	</definition>
 	
 	<definition name="anonymous/task/show" extends="master">
-	<put-attribute name="body" type="template"
-		value="../anonymous/task/show.jsp" />
+		<put-attribute name="body" type="template"
+			value="../anonymous/task/show.jsp" />
 	</definition>
 
 </tiles-definitions>

@@ -19,4 +19,10 @@
 	<acme:form-integer code="administrator.dashboard.label.numberOfPublicTasks" path="numberOfPublicTasks" />
 	<acme:form-integer code="administrator.dashboard.label.numberOfPrivateTasks" path="numberOfPrivateTasks" />
 	<acme:form-integer code="administrator.dashboard.label.numberOfFinishedTasks" path="numberOfFinishedTasks" />
+	<acme:form-integer code="administrator.dashboard.label.numberOfNonFinishedTasks" path="numberOfNonFinishedTasks" />
+	<acme:form-double code="administrator.dashboard.label.avgWorkload" path="avgWorkload" />
+	<acme:form-double code="administrator.dashboard.label.devWorkload" path="devWorkload" />
+	<acme:form-double code="administrator.dashboard.label.minWorkload" path="minWorkload" />
+	<acme:form-double code="administrator.dashboard.label.maxWorkload" path="maxWorkload" />
+	
 </acme:form>

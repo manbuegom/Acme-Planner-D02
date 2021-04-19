@@ -15,5 +15,10 @@
 		<put-attribute name="body" type="template"
 			value="../anonymous/shout/list.jsp" />
 	</definition>
+	
+	<definition name="anonymous/shout/show" extends="master">
+		<put-attribute name="body" type="template"
+			value="../anonymous/shout/show.jsp" />
+	</definition>
 
 </tiles-definitions>

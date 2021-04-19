@@ -1,43 +1,44 @@
-package acme.features.anonymous.task;
+
+package acme.features.anonymous.shout;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.Task;
+import acme.entities.Shout;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Anonymous;
 import acme.framework.services.AbstractShowService;
 
 @Service
-public class AnonymousTaskShowService implements AbstractShowService<Anonymous, Task>{
+public class AnonymousShoutShowService implements AbstractShowService<Anonymous, Shout> {
 
 	@Autowired
-	protected AnonymousTaskRepository repository;
-	
-	@Override
-	public boolean authorise(final Request<Task> request) {
+	protected AnonymousShoutRepository repository;
 
+
+	@Override
+	public boolean authorise(final Request<Shout> request) {
 		assert request != null;
-		
+
 		return true;
 	}
 
 	@Override
-	public void unbind(final Request<Task> request, final Task entity, final Model model) {
+	public void unbind(final Request<Shout> request, final Shout entity, final Model model) {
 		assert request != null;
 		assert entity != null;
-		assert model!= null;
-		
-		request.unbind(entity, model,  "start", "end", "title", "text", "link", "workLoad");
-		
+		assert model != null;
+
+		request.unbind(entity, model, "moment", "author", "text");
+
 	}
 
-	
+
 	@Override
-	public Task findOne(final Request<Task> request) {
+	public Shout findOne(final Request<Shout> request) {
 		assert request != null;
-		Task result;
+		Shout result;
 		Integer id;
 		id = request.getModel().getInteger("id");
 		result = this.repository.findOnebyId(id);

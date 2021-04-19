@@ -22,6 +22,7 @@
 	<acme:form-textarea code="anonymous.task.label.text" path="text" />
 	<acme:form-url code="anonymous.task.label.info" path="link" />
     <acme:form-checkbox code="anonymous.task.label.visibility" path="visibility" /> 
+    <acme:form-double code="anonymous.task.label.workLoad" path="workLoad" /> 
 
 
 	<acme:form-submit code="anonymous.task.button.create"

@@ -14,7 +14,7 @@
 
 <!-- EL NAME PONIENDO EL SHOW NO FUNCIONA PERO EL FORM SI	  -->
 	<definition name="administrator/dashboard/form" extends="master">
-        <put-attribute name="body" type="template" value="../administrator/dashboard/show.jsp" />
+        <put-attribute name="body" type="template" value="../administrator/dashboard/form.jsp" />
     </definition>
 
 </tiles-definitions>

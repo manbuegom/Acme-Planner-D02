@@ -8,17 +8,15 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-anonymous.shout.form.title.create = Crear shout
+administrator.dashboard.label.numberOfFinishedTasks = Número de tareas finalizadas:
+administrator.dashboard.label.numberOfPublicTasks = Número de tareas públicas:
+administrator.dashboard.label.numberOfPrivateTasks = Número de tareas privadas:
+administrator.dashboard.label.numberOfNonFinishedTasks = Número de tareas no finalizadas:
+administrator.dashboard.label.avgWorkload = Media de la carga de trabajo:
+administrator.dashboard.label.devWorkload = Desviación de la carga de trabajo:
+administrator.dashboard.label.maxWorkload = Carga de trabajo máxima:
+administrator.dashboard.label.minWorkload = Carga de trabajo mínima:
 
-anonymous.shout.label.author = Autor:
-anonymous.shout.label.moment = Fecha:
-anonymous.shout.label.text = Descripcion:
-anonymous.shout.label.info = Link:
 
-
-anonymous.shout.button.create = Crear
-anonymous.shout.button.return = Volver
-
-anonymous.shout.list.label.moment = Momento
-anonymous.shout.list.label.author = Autor
-anonymous.shout.list.label.text = Texto
+administrator.dashboard.button.show = Ver
+administrator.dashboard.button.return = Volver

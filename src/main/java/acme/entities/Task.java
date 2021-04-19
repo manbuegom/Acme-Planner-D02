@@ -1,10 +1,13 @@
 package acme.entities;
 
+import java.time.Duration;
+import java.time.ZoneId;
 import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 import javax.validation.constraints.Future;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -46,21 +49,21 @@ public class Task extends DomainEntity {
 
 	@NotNull
 	protected Boolean			visibility;
+	
+	@NotNull
+	protected Double 			workLoad;
 
-
-//	//Derived
-//	@Transient
-//	public Period getExecutionPeriod() {
-//
-//		return Period.between(this.end.toInstant().atZone(ZoneId.systemDefault()).toLocalDate(),
-//			this.start.toInstant().atZone(ZoneId.systemDefault()).toLocalDate());
-//
-//	}
-//
-//	//Derived
+	//Derived
+	@Transient
+	public Long getExecutionPeriod() {
+		return Duration.between(this.end.toInstant().atZone(ZoneId.systemDefault()).toLocalDate(),
+			this.start.toInstant().atZone(ZoneId.systemDefault()).toLocalDate()).getSeconds();
+	}
+	
+	//Derived
+	
 //	@Transient
 //	public Double getWorkLoad() {
-//
 //		return (double) ChronoUnit.HOURS.between(this.end.toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime(),
 //			this.start.toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime());
 //

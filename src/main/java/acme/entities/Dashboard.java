@@ -1,6 +1,8 @@
 
 package acme.entities;
 
+import java.time.Period;
+
 import javax.persistence.Entity;
 import javax.validation.constraints.NotNull;
 
@@ -21,6 +23,26 @@ public class Dashboard extends DomainEntity {
 	@NotNull
 	protected Integer			numberOfPublicTasks;
 
-	@NotNull
 	protected Integer			numberOfFinishedTasks;
+	
+	protected Integer			numberOfNonFinishedTasks;
+	
+	protected Double			avgWorkload;
+	
+	protected Double			minWorkload;
+	
+	protected Double			maxWorkload;
+	
+	protected Double			devWorkload;
+	
+	protected Period			executionPeriod;
+	
+	protected Double			avgPeriod;
+	
+	protected Double			minPeriod;
+	
+	protected Double			maxPeriod;
+	
+	protected Double			devPeriod;
+	
 }

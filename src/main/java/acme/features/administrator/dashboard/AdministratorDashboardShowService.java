@@ -29,7 +29,8 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "numberOfFinishedTasks", "numberOfPrivateTasks", "numberOfPublicTasks");
+		request.unbind(entity, model, "numberOfFinishedTasks", "numberOfPrivateTasks", "numberOfPublicTasks", 
+			"numberOfNonFinishedTasks","avgWorkload","devWorkload", "minWorkload", "maxWorkload");
 
 	}
 
@@ -42,6 +43,16 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		res.setNumberOfPublicTasks(this.repository.numberOfPublicTasks());
 		res.setNumberOfFinishedTasks(this.repository.numberOfFinishedTasks());
 		res.setNumberOfPrivateTasks(this.repository.numberOfPrivateTasks());
+		res.setNumberOfNonFinishedTasks(this.repository.numberOfNonFinishedTasks());
+		res.setAvgWorkload(this.repository.avgWorkload());
+		res.setDevWorkload(this.repository.devWorkload());
+		res.setMinWorkload(this.repository.minWorkload());
+		res.setMaxWorkload(this.repository.maxWorkload());
+//		res.setAvgWorkload(this.repository.avgWorkload());
+//		res.setDevWorkload(this.repository.devWorkload());
+//		res.setMinWorkload(this.repository.minWorkload());
+//		res.setMaxWorkload(this.repository.maxWorkload());
+		
 		res.setId(20);
 
 		return res;
