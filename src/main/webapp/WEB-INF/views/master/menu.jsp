@@ -26,7 +26,7 @@
 		
 
 		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
-			<acme:menu-suboption code="master.menu.athenticated.list-tasks"  action="/authenticated/task/list"/>
+			<acme:menu-suboption code="master.menu.authenticated.list.tasks"  action="/authenticated/task/list"/>
 		</acme:menu-option>
 		
 	

@@ -38,7 +38,7 @@ master.menu.task.list = Ver tasks
 
 # master.menu.authenticated #######################################################
 master.menu.authenticated = Autenticado
-master.menu.authenticated.list-tasks = Lista de tasks
+master.menu.authenticated.list.tasks = Lista de tasks
 # master.menu.anonymous #######################################################
 
 master.menu.anonymous = Anónimo
