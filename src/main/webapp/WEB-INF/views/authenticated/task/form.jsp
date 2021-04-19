@@ -15,7 +15,7 @@
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
-<acme:form>
+<acme:form readonly= 'true'> 
     <acme:form-moment code="authenticated.task.label.start" path="start" />
     <acme:form-moment code="authenticated.task.label.end" path="end" />
     <acme:form-textbox code="authenticated.task.label.title" path="title" />
@@ -23,8 +23,5 @@
     <acme:form-url code="authenticated.task.label.info" path="link" />
     <acme:form-checkbox code="authenticated.task.label.visibility" path="visibility" /> 
 
-
-    <acme:form-submit code="authenticated.task.button.create"
-        action="/authenticated/task/create" />
     <acme:form-return code="authenticated.task.button.return" />
 </acme:form>
