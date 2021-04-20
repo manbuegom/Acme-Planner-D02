@@ -13,9 +13,13 @@ administrator.dashboard.label.numberOfPublicTasks = Número de tareas públicas:
 administrator.dashboard.label.numberOfPrivateTasks = Número de tareas privadas:
 administrator.dashboard.label.numberOfNonFinishedTasks = Número de tareas no finalizadas:
 administrator.dashboard.label.avgWorkload = Media de la carga de trabajo:
-administrator.dashboard.label.devWorkload = Desviación de la carga de trabajo:
+administrator.dashboard.label.devWorkload = Desviación típica de la carga de trabajo:
 administrator.dashboard.label.maxWorkload = Carga de trabajo máxima:
 administrator.dashboard.label.minWorkload = Carga de trabajo mínima:
+administrator.dashboard.label.avgPeriod = Media del periodo de ejecución:
+administrator.dashboard.label.devPeriod = Desviación típica del periodo de ejecución:
+administrator.dashboard.label.minPeriod = Periodo de ejecución mínimo:
+administrator.dashboard.label.maxPeriod = Periodo de ejecución máximo:
 
 
 administrator.dashboard.button.show = Ver

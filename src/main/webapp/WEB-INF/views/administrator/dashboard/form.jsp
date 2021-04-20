@@ -24,5 +24,9 @@
 	<acme:form-double code="administrator.dashboard.label.devWorkload" path="devWorkload" />
 	<acme:form-double code="administrator.dashboard.label.minWorkload" path="minWorkload" />
 	<acme:form-double code="administrator.dashboard.label.maxWorkload" path="maxWorkload" />
+	<acme:form-double code="administrator.dashboard.label.avgPeriod" path="avgPeriod" />
+	<acme:form-double code="administrator.dashboard.label.devPeriod" path="devPeriod" />
+	<acme:form-double code="administrator.dashboard.label.minPeriod" path="minPeriod" />
+	<acme:form-double code="administrator.dashboard.label.maxPeriod" path="maxPeriod" />
 	
 </acme:form>

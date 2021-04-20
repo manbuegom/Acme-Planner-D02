@@ -13,9 +13,13 @@ administrator.dashboard.label.numberOfPublicTasks = Number of public tasks:
 administrator.dashboard.label.numberOfPrivateTasks = Number of private tasks:
 administrator.dashboard.label.numberOfNonFinishedTasks = Number of non finished tasks:
 administrator.dashboard.label.avgWorkload = Workloads average:
-administrator.dashboard.label.devWorkload = Workloads desviation:
-administrator.dashboard.label.maxWorkload = Maximum workload:
+administrator.dashboard.label.devWorkload = Workloads standard deviation:
 administrator.dashboard.label.minWorkload = Minimum workload:
+administrator.dashboard.label.maxWorkload = Maximum workload:
+administrator.dashboard.label.avgPeriod = Execution period average:
+administrator.dashboard.label.devPeriod = Execution period standard deviation:
+administrator.dashboard.label.minPeriod = Minimum execution period:
+administrator.dashboard.label.maxPeriod = Maximum execution period:
 
 
 administrator.dashboard.button.show = Show

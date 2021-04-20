@@ -1,7 +1,6 @@
+
 package acme.entities;
 
-import java.time.Duration;
-import java.time.ZoneId;
 import java.util.Date;
 
 import javax.persistence.Entity;
@@ -27,14 +26,14 @@ public class Task extends DomainEntity {
 	protected static final long	serialVersionUID	= 1L;
 
 	@Temporal(TemporalType.TIMESTAMP)
-    @Future
-    @NotNull
-    protected Date 		start;
+	@Future
+	@NotNull
+	protected Date				start;
 
 	@Temporal(TemporalType.TIMESTAMP)
-    @Future
-    @NotNull
-    protected Date 		end;
+	@Future
+	@NotNull
+	protected Date				end;
 
 	@NotBlank
 	@Length(max = 80)
@@ -49,24 +48,21 @@ public class Task extends DomainEntity {
 
 	@NotNull
 	protected Boolean			visibility;
-	
+
 	@NotNull
-	protected Double 			workLoad;
+	protected Double			workLoad;
 
 	//Derived
+
+
 	@Transient
 	public Long getExecutionPeriod() {
-		return Duration.between(this.end.toInstant().atZone(ZoneId.systemDefault()).toLocalDate(),
-			this.start.toInstant().atZone(ZoneId.systemDefault()).toLocalDate()).getSeconds();
+
+		final int milisecondsByHour = 3600000;
+		final long hours = (this.end.getTime() - this.start.getTime()) / milisecondsByHour;
+
+		return hours;
+
 	}
-	
-	//Derived
-	
-//	@Transient
-//	public Double getWorkLoad() {
-//		return (double) ChronoUnit.HOURS.between(this.end.toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime(),
-//			this.start.toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime());
-//
-//	}
 
 }

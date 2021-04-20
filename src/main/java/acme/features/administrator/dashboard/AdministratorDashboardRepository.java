@@ -1,9 +1,12 @@
 
 package acme.features.administrator.dashboard;
 
+import java.util.Collection;
+
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import acme.entities.Task;
 import acme.framework.repositories.AbstractRepository;
 
 @Repository
@@ -33,7 +36,8 @@ public interface AdministratorDashboardRepository extends AbstractRepository {
 	@Query("select min(t.workLoad) from Task t ")
 	Double minWorkload();
 	
-	
+	@Query("select t from Task t")
+	Collection<Task> findMany();
 
 
 }
