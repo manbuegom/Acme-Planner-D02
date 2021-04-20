@@ -10,7 +10,7 @@
 
 # master.banner.welcome #######################################################
 
-master.banner.background = #FFE97F 
+master.banner.background = #FFE97F  
 
 # master.welcome ##############################################################
 
@@ -27,18 +27,19 @@ master.menu.sign-out = Sign out
 
 # master.menu.shout #######################################################
 
-master.menu.anonymous.list-shouts = List shouts
-
-# master.menu.shout #######################################################
 
 master.menu.shout = Create shout
 
 # master.menu.task #######################################################
 
-master.menu.task = Create task
+master.menu.task = Create task 
+master.menu.task.list = List tasks
 
+# master.menu.authenticated #######################################################
+master.menu.authenticated = Authenticated
+master.menu.authenticated.list.tasks = List tasks
 # master.menu.anonymous #######################################################
-
+master.menu.anonymous.list-shouts = List shouts
 master.menu.anonymous = Anonymous
 master.menu.anonymous.favourite-link = Favourite link
 

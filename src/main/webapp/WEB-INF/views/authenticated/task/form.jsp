@@ -1,5 +1,5 @@
 <%--
-- list.jsp
+- form.jsp
 -
 - Copyright (C) 2012-2021 Rafael Corchuelo.
 -
@@ -15,15 +15,13 @@
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
-<acme:list readonly="true">
-	<acme:list-column code="anonymous.task.label.start" path="start"
-		width="15%" />
-	<acme:list-column code="anonymous.task.label.end" path="end"
-		width="15%" />
-	<acme:list-column
-			code="anonymous.task.label.title" path="title" width="70%" />
-	
-</acme:list>
+<acme:form readonly= 'true'> 
+    <acme:form-moment code="authenticated.task.label.start" path="start" />
+    <acme:form-moment code="authenticated.task.label.end" path="end" />
+    <acme:form-textbox code="authenticated.task.label.title" path="title" />
+    <acme:form-textarea code="authenticated.task.label.text" path="text" />
+    <acme:form-url code="authenticated.task.label.info" path="link" />
+    <acme:form-checkbox code="authenticated.task.label.visibility" path="visibility" /> 
 
-
-
+    <acme:form-return code="authenticated.task.button.return" />
+</acme:form>
