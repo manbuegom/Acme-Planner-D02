@@ -47,14 +47,14 @@ public class AnonymousTaskCreateService implements AbstractCreateService<Anonymo
 		if (request.isMethod(HttpMethod.GET)) {
 			model.setAttribute("start", "");
 			model.setAttribute("end", "");
-			model.setAttribute("executionPeriod", "");
+//		model.setAttribute("executionPeriod", "");
 			model.setAttribute("workLoad", "");
 			model.setAttribute("title", "");
 			model.setAttribute("text", "");
 			model.setAttribute("link", "");
 			model.setAttribute("visibility", "");
 		} else {
-			request.transfer(model, "start", "end", "title", "text", "link", "visibility");
+			request.transfer(model, "start", "end", "title", "text", "link", "visibility", "workLoad");
 		}
 		
 	}
@@ -65,7 +65,7 @@ public class AnonymousTaskCreateService implements AbstractCreateService<Anonymo
 
 		Task result;
 		result = new Task();
-
+		
 		return result;
 	}
 

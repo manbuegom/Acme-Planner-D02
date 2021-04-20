@@ -15,10 +15,10 @@
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
-<acme:list readonly="false">
-	<acme:list-column code="anonymous.shout.list.label.moment" path="moment" width="20%"/>
-	<acme:list-column code="anonymous.shout.list.label.author" path="author" width="20%"/>
-	<acme:list-column code="anonymous.shout.list.label.text" path="text" width="60%"/>
+<acme:list readonly="true">
+	<acme:list-column code="administrator.dashboard.list.label.numberOfPrivateTasks" path="numberOfPrivateTasks" width="20%"/>
+	<acme:list-column code="administrator.dashboard.list.label.numberOfFinishedTasks" path="numberOfFinishedTasks" width="20%"/>
+	<acme:list-column code="administrator.dashboard.list.label.numberOfPublicTasks" path="numberOfPublicTasks" width="20%"/>
 </acme:list>
 
 

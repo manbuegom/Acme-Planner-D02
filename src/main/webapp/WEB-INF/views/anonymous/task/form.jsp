@@ -22,7 +22,8 @@
 		<acme:form-textbox code="anonymous.task.label.title" path="title" />
 		<acme:form-textarea code="anonymous.task.label.text" path="text" />
 		<acme:form-url code="anonymous.task.label.info" path="link" />
-    	<acme:form-checkbox code="anonymous.task.label.visibility" path="visibility" /> 
+    	<acme:form-checkbox code="anonymous.task.label.visibility" path="visibility" />
+      <acme:form-double code="anonymous.task.label.workLoad" path="workLoad" /> 
     
     	<acme:form-submit code="anonymous.task.button.create"
 		action="/anonymous/task/create" />
@@ -46,5 +47,6 @@
 	</acme:form>
 	
 </jstl:if>
+
 
 

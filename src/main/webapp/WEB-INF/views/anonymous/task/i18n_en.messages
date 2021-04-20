@@ -17,6 +17,7 @@ anonymous.task.label.text = Text:
 anonymous.task.label.link = Link:
 anonymous.task.label.info = Information:
 anonymous.task.label.visibility= Visibility:
+anonymous.task.label.workLoad= workLoad:
 
 anonymous.task.button.create = Create
 anonymous.task.button.return = Return
