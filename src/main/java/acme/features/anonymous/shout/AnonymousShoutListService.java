@@ -1,6 +1,9 @@
 package acme.features.anonymous.shout;
 
+import java.sql.Date;
+import java.time.LocalDate;
 import java.util.Collection;
+import java.util.Comparator;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -41,13 +44,30 @@ public class AnonymousShoutListService implements AbstractListService<Anonymous,
 	@Override
 	public Collection<Shout> findMany(final Request<Shout> request) {
 		assert request != null;
-
-		Collection<Shout> result;
-
-		result = this.repository.findMany();
-
+		final Collection<Shout> result = this.repository.findMany(Date.valueOf(LocalDate.now().minusMonths(1)));
+		result.stream().sorted(Comparator.comparing(Shout::getMoment).reversed());
 		return result;
 	}
+	
+//	@Override
+//	public Collection<Shout> findMany(final Request<Shout> request) {
+//		assert request != null;
+//		Collection<Shout> result;
+//		result = this.repository.findMany();
+//		result.stream().map(Shout::getMoment).filter(m->this.correctDate((Date) m)).collect(Collectors.toList());
+//		return result;
+//	}
+//	
+//	public Boolean correctDate (final Date d) {
+//		Boolean res = false;
+//		final List<Date> ld = new ArrayList<>();
+//			
+//		if (d.after(Date.valueOf(LocalDate.now().minusMonths(1))) && (d.before(Date.valueOf(LocalDate.now())))) {	
+//			ld.add(d);
+//			res = true;
+//		}
+//		return res;
+//	}
 
 
 }
