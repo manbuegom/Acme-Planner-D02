@@ -1,9 +1,5 @@
 
 package acme.entities;
-
-import java.time.Period;
-import java.time.ZoneId;
-import java.time.temporal.ChronoUnit;
 import java.util.Date;
 
 import javax.persistence.Entity;
@@ -16,7 +12,6 @@ import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
-import org.springframework.data.annotation.Transient;
 
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;

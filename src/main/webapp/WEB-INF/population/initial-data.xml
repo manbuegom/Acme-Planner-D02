@@ -41,11 +41,6 @@
 		<property name="userAccount" ref="anonymousUserAccount" />
 	</bean>
 
-	<bean id="spam01" class="acme.entities.Spam">
-		<property name="spam"
-			value="sex, hard core, viagra, cialis, nigeria, you’ve won, million dollar, sexo, has ganado, millón de dólares" />
-		<property name="threshold" value="10.0" />
-	</bean>
 
 	<!-- Administrators -->
 
@@ -69,8 +64,6 @@
 		</property>
 	</bean>
 
-
-
 	<bean name="administratorAdministrator"
 		class="acme.framework.entities.Administrator">
 		<property name="userAccount" ref="administratorUserAccount" />
@@ -80,5 +73,4 @@
 		class="acme.framework.entities.Authenticated">
 		<property name="userAccount" ref="administratorUserAccount" />
 	</bean>
-
 </beans>

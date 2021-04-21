@@ -17,19 +17,15 @@
 	"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 
 <tiles-definitions>
-
-	<definition name="anonymous/task/form" extends="master">
-		<put-attribute name="body" type="template" value="../anonymous/task/form.jsp" />
-	</definition>
 	
 	<definition name="anonymous/task/list" extends="master">
 		<put-attribute name="body" type="template"
 			value="../anonymous/task/list.jsp" />
 	</definition>
 	
-	<definition name="anonymous/task/show" extends="master">
+	<definition name="anonymous/task/form" extends="master">
 		<put-attribute name="body" type="template"
-			value="../anonymous/task/show.jsp" />
+			value="../anonymous/task/form.jsp" />
 	</definition>
 
 </tiles-definitions>

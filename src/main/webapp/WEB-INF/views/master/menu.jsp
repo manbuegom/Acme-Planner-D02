@@ -22,9 +22,7 @@
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="http://www.example.com/"/>
 			<acme:menu-suboption code="master.menu.shout" action="/anonymous/shout/create"/>
 			<acme:menu-suboption code="master.menu.anonymous.list-shouts" action="/anonymous/shout/list"/>
-			<acme:menu-suboption code="master.menu.task" action="/anonymous/task/create"/>
 			<acme:menu-suboption code="master.menu.task.list" action="/anonymous/task/list"/>
-			
 			
 		</acme:menu-option>
 		
