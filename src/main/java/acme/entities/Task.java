@@ -55,7 +55,6 @@ public class Task extends DomainEntity {
 	protected Double			workLoad;
 
 	@ManyToMany
-	@NotNull
 	protected List<WorkPlan>	workPlans;
 
 	//Derived

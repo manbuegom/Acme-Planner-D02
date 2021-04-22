@@ -1,3 +1,4 @@
+
 package acme.features.anonymous.workplan;
 
 import javax.annotation.PostConstruct;
@@ -13,14 +14,19 @@ import acme.framework.entities.Anonymous;
 
 @Controller
 @RequestMapping("/anonymous/workplan/")
-public class AnonymousWorkPlanController extends AbstractController<Anonymous, WorkPlan>{
+public class AnonymousWorkPlanController extends AbstractController<Anonymous, WorkPlan> {
 
 	@Autowired
-	protected AnonymousWorkPlanListService listService;
-	
+	protected AnonymousWorkPlanListService	listService;
+
+	@Autowired
+	private AnonymousWorkPlanShowService	showService;
+
+
 	@PostConstruct
 	protected void initialise() {
 		super.addBasicCommand(BasicCommand.LIST, this.listService);
+		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 	}
-	
+
 }

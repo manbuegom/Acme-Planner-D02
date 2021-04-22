@@ -19,24 +19,26 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class WorkPlan extends DomainEntity{
+public class WorkPlan extends DomainEntity {
+
+	protected static final long	serialVersionUID	= 1L;
 
 	@Temporal(TemporalType.TIMESTAMP)
 	@Future
 	@NotNull
-	protected Date			start;
+	protected Date				start;
 
 	@Temporal(TemporalType.TIMESTAMP)
 	@Future
 	@NotNull
-	protected Date			end;
+	protected Date				end;
 
 	@ManyToMany
-	@NotNull
-	protected List<Task>	tasks;
+	protected List<Task>		tasks;
 
 	@NotNull
-	protected Boolean		visibility;
+	protected Boolean			visibility;
+
 
 	@Transient
 	public Long getExecutionPeriod() {
@@ -46,5 +48,5 @@ public class WorkPlan extends DomainEntity{
 
 		return hours;
 	}
-	
+
 }
