@@ -105,8 +105,8 @@
 	</bean>
 	
 		<bean id="task04" class="acme.entities.Task">
-		<property name="start" value="2022/04/26 12:30" />
-		<property name="end" value="2022/04/26 14:30" />
+		<property name="start" value="2022/07/26 12:30" />
+		<property name="end" value="2022/07/26 14:30" />
 		<property name="title" value="Segunda" />
 		<property name="text" value="Revisar los documentos" />
 		<property name="link" value="https://ferki.com" />
@@ -126,5 +126,19 @@
 		<property name="workLoad" value="2.0" />
 	</bean>
 -->
+
+	<bean id="workplan01" class="acme.entities.WorkPlan">
+		<property name="start" value="2022/03/26 12:30" />
+		<property name="end" value="2022/05/26 14:30" />
+		<property name="visibility" value="true" />
+		<property name="tasks" value="acme.entities.Task" />
+	</bean>
+
+	<!-- <bean id="workplan02" class="acme.entities.WorkPlan">
+		<property name="start" value="2022/07/25 09:30" />
+		<property name="end" value="2022/12/26 19:30" />
+		<property name="visibility" value="true" />
+		<property name="tasks" value="tasks[3]" />
+	</bean> -->
 
 </beans>
