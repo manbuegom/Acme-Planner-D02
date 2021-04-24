@@ -4,7 +4,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>518</x>
+      <x>539</x>
       <y>168</y>
       <w>168</w>
       <h>42</h>
@@ -18,7 +18,7 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>476</x>
+      <x>497</x>
       <y>168</y>
       <w>56</w>
       <h>42</h>
@@ -29,7 +29,7 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>168</x>
+      <x>189</x>
       <y>98</y>
       <w>154</w>
       <h>84</h>
@@ -49,7 +49,7 @@ bg=orange
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>168</x>
+      <x>189</x>
       <y>35</y>
       <w>168</w>
       <h>42</h>
@@ -62,8 +62,8 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>490</x>
-      <y>518</y>
+      <x>119</x>
+      <y>595</y>
       <w>21</w>
       <h>42</h>
     </coordinates>
@@ -74,7 +74,7 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>476</x>
+      <x>497</x>
       <y>203</y>
       <w>63</w>
       <h>63</h>
@@ -85,7 +85,7 @@ bg=blue</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>763</x>
+      <x>784</x>
       <y>175</y>
       <w>70</w>
       <h>42</h>
@@ -100,7 +100,7 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>763</x>
+      <x>784</x>
       <y>119</y>
       <w>70</w>
       <h>42</h>
@@ -115,7 +115,7 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>763</x>
+      <x>784</x>
       <y>224</y>
       <w>70</w>
       <h>42</h>
@@ -130,7 +130,7 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>679</x>
+      <x>700</x>
       <y>147</y>
       <w>98</w>
       <h>56</h>
@@ -141,7 +141,7 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>679</x>
+      <x>700</x>
       <y>182</y>
       <w>98</w>
       <h>21</h>
@@ -152,7 +152,7 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>679</x>
+      <x>700</x>
       <y>182</y>
       <w>98</w>
       <h>63</h>
@@ -163,7 +163,7 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>168</x>
+      <x>189</x>
       <y>196</y>
       <w>154</w>
       <h>49</h>
@@ -179,7 +179,7 @@ bg=orange</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>343</x>
+      <x>364</x>
       <y>147</y>
       <w>140</w>
       <h>63</h>
@@ -194,7 +194,7 @@ Provider
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>336</x>
+      <x>357</x>
       <y>224</y>
       <w>147</w>
       <h>56</h>
@@ -209,7 +209,7 @@ Consumer
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
+      <x>21</x>
       <y>98</y>
       <w>154</w>
       <h>56</h>
@@ -226,7 +226,7 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
+      <x>21</x>
       <y>168</y>
       <w>154</w>
       <h>91</h>
@@ -246,7 +246,7 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
+      <x>21</x>
       <y>273</y>
       <w>154</w>
       <h>63</h>
@@ -263,7 +263,7 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>476</x>
+      <x>497</x>
       <y>0</y>
       <w>238</w>
       <h>91</h>
@@ -285,7 +285,7 @@ UserAccount
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>595</x>
+      <x>616</x>
       <y>84</y>
       <w>49</w>
       <h>98</h>
@@ -299,26 +299,25 @@ has v</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>497</x>
-      <y>364</y>
+      <x>231</x>
+      <y>329</y>
       <w>266</w>
       <h>84</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
-Shout
+Spam
 --
-+ moment: Date{NotNull, Temporal(TIMESTAMP), past}
-+ author: String (nTotBlank)
-+ text: String (NotBlank)
-+ info: String (URL)
++ threshold: double {NotNull, Range(0,100)}
++ spam: String {NotBlank}
+/+ threshold: String {Transient}
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>497</x>
-      <y>462</y>
+      <x>126</x>
+      <y>539</y>
       <w>266</w>
       <h>133</h>
     </coordinates>
@@ -327,12 +326,73 @@ Task
 --
 + start: Date{NotNull, Temporal(TIMESTAMP), future}
 + end: Date{NotNull, Temporal{TIMESTAMP), future}
-+ title: String (NotBlank, lenght(max = 80))
++ title: String {NotBlank, lenght(max = 80)}
 + text: String (NotBlank, lenght(max = 500))
-+ link: String (URL)
-+ visibility: Boolean (NotNull)
++ link: String {URL}
++ visibility: Boolean {NotNull}
 + / workload: Double
 + / executionPeriod: Period</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>28</x>
+      <y>413</y>
+      <w>175</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+WorkPlan
+--
++ visibility: Boolean 
+/+ executionPeriod: Period
+/+ workload: Double</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>539</x>
+      <y>336</y>
+      <w>266</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Shout
+--
++ moment: Date{NotNull, Temporal(TIMESTAMP), past}
++ author: String {NotBlank}
++ text: String {NotBlank}
++ info: String {URL}
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>532</x>
+      <y>476</y>
+      <w>266</w>
+      <h>182</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Dashboard
+--
++ numberOfPrivateTasks: Integer
++ numberOfPublicTasks: Integer
++ numberOfFinishedTasks: Integer
++ numberOfNonFinishedTasks: Integer
++ avgWorkload: Double
++ minWorkload: Double
++ maxWorklaod: Double
++ devWorkload: Double
++ avgPeriod: Double
++ minPeriod: Double
++ maxPeriod: Double
++ minPeriod: Double
++ devPeriod: Double
+</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>
