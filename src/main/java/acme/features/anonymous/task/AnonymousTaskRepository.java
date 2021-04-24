@@ -12,8 +12,6 @@ import acme.framework.repositories.AbstractRepository;
 @Repository
 public interface AnonymousTaskRepository extends AbstractRepository {
 
-    void save(Task task);
-    
     @Query("select t from Task t")
    	Collection<Task> findMany();
 

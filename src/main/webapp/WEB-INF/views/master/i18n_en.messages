@@ -38,10 +38,14 @@ master.menu.task.list = List tasks
 # master.menu.authenticated #######################################################
 master.menu.authenticated = Authenticated
 master.menu.authenticated.list.tasks = List tasks
+
 # master.menu.anonymous #######################################################
-master.menu.anonymous.list-shouts = List shouts
+
 master.menu.anonymous = Anonymous
-master.menu.anonymous.favourite-link = Favourite link
+master.menu.anonymous.shout = Create shout
+master.menu.anonymous.list-shouts = List shouts
+master.menu.anonymous.task.list = List de tasks
+master.menu.anonymous.workplan.list = List workplans
 
 # master.menu.administrator ###################################################
 

@@ -1,5 +1,6 @@
 
 package acme.entities;
+
 import java.util.Date;
 
 import javax.persistence.Entity;

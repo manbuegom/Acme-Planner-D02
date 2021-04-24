@@ -28,7 +28,6 @@ master.menu.sign-out = Salir
 
 # master.menu.shout #######################################################
 
-master.menu.anonymous.list-shouts = Ver shouts
 master.menu.shout = Crear shout
 
 # master.menu.task #######################################################
@@ -42,8 +41,11 @@ master.menu.authenticated.list.tasks = Lista de tasks
 # master.menu.anonymous #######################################################
 
 master.menu.anonymous = Anónimo
-master.menu.anonymous.favourite-link = Enlace favorito
-master.menu.anonymous.list-shouts = Ver shouts
+master.menu.anonymous.shout = Crear shouts
+master.menu.anonymous.list-shouts = Lista de shouts
+master.menu.anonymous.task.list = Lista de tasks
+master.menu.anonymous.workplan.list = Lista de workplans
+
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrador

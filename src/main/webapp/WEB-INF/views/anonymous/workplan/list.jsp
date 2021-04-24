@@ -17,14 +17,8 @@
 
 
 <acme:list>
-
-	<acme:list-column code="anonymous.task.label.title" path="title" width="20%"/>
-	<acme:list-column code="anonymous.task.label.start" path="start" width="20%"/>
-	<acme:list-column code="anonymous.task.label.end" path="end" width="20%"/>
-	<acme:list-column code="anonymous.task.label.text" path="text" width="20%"/>
-	<acme:list-column code="anonymous.task.label.link" path="link" width="20%"/>
-
-
+	<acme:list-column code="anonymous.workplan.label.start" path="start" width="20%"/>
+	<acme:list-column code="anonymous.workplan.label.end" path="end" width="20%"/>
 </acme:list>
 
 
