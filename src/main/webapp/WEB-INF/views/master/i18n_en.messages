@@ -51,6 +51,9 @@ master.menu.anonymous.workplan.list = List workplans
 
 master.menu.administrator = Administrator
 master.menu.administrator.dashboard = Dashboard
+master.menu.administrator.spam = Spam management
+master.menu.administrator.spam.show = Show spam parameters
+master.menu.administrator.spam.update = Update spam parameters
 master.menu.administrator.user-accounts = User accounts
 master.menu.administrator.populate-initial = Populate DB (initial)
 master.menu.administrator.populate-sample = Populate DB (samples)
