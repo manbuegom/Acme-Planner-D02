@@ -18,11 +18,8 @@
 <acme:form>
 		<acme:form-moment code="anonymous.workplan.label.start" path="start" />
 		<acme:form-moment code="anonymous.workplan.label.end" path="end" />
-    
-		<acme:form-return code="anonymous.workplan.button.return" />
-		
 </acme:form>
-	
+
 
 
 

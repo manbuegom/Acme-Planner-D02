@@ -2,10 +2,8 @@
 package acme.entities;
 
 import java.util.Date;
-import java.util.List;
 
 import javax.persistence.Entity;
-import javax.persistence.ManyToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Transient;
@@ -33,8 +31,6 @@ public class WorkPlan extends DomainEntity {
 	@NotNull
 	protected Date				end;
 
-	@ManyToMany
-	protected List<Task>		tasks;
 
 	@NotNull
 	protected Boolean			visibility;

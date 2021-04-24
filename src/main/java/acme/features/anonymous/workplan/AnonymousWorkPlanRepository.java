@@ -12,8 +12,6 @@ import acme.framework.repositories.AbstractRepository;
 @Repository
 public interface AnonymousWorkPlanRepository extends AbstractRepository{
 	
-	void save(WorkPlan workplan);
-	
 	 @Query("select w from WorkPlan w where w.visibility = true and w.end > ?1")
 	 Collection<WorkPlan> findPublicWorkPlans(Date date);
 	 
