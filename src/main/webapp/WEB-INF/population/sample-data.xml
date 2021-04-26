@@ -67,6 +67,35 @@
 		<property name="info" value="https://buscozapas.com" />
 	</bean>
 	
+	<bean id="shout07" class="acme.entities.Shout">
+		<property name="moment" value="2021/04/24 11:29" />
+		<property name="author" value="Miguel Campello" />
+		<property name="text" value="De colores son" />
+		<property name="info" value="https://elbicho.com" />
+	</bean>
+	
+	<bean id="shout08" class="acme.entities.Shout">
+		<property name="moment" value="2021/04/24 11:31" />
+		<property name="author" value="Maynard Keenan" />
+		<property name="text" value="¿Qué pasa contigo?" />
+		<property name="info" value="https://tool.com" />
+	</bean>
+	
+	<bean id="shout09" class="acme.entities.Shout">
+		<property name="moment" value="2021/04/24 11:33" />
+		<property name="author" value="Isabel Cea" />
+		<property name="text" value="De la monarquía a la criptocracia" />
+		<property name="info" value="https://tab.com" />
+	</bean>
+	
+	<bean id="shout10" class="acme.entities.Shout">
+		<property name="moment" value="2021/04/23 03:43" />
+		<property name="author" value="Thom Yorke" />
+		<property name="text" value="Estoy un poco triste" />
+		<property name="info" value="https://letdown.com" />
+	</bean>
+	
+	
 	<bean id="dashboard1" class="acme.entities.Dashboard">
 		<property name="numberOfFinishedTasks" value="5" />
 		<property name="numberOfPrivateTasks" value="8" />
@@ -112,6 +141,46 @@
 		<property name="link" value="https://ferki.com" />
 		<property name="visibility" value="true" />
 		<property name="workLoad" value="2.2" />
+	</bean>
+	
+	<bean id="task05" class="acme.entities.Task">
+		<property name="start" value="2022/04/26 13:30" />
+		<property name="end" value="2022/04/26 14:30" />
+		<property name="title" value="Tercera" />
+		<property name="text" value="Comprar pan" />
+		<property name="link" value="https://mercadona.com" />
+		<property name="visibility" value="true" />
+		<property name="workLoad" value="1.2" />
+	</bean>
+	
+	<bean id="task06" class="acme.entities.Task">
+		<property name="start" value="2022/06/13 21:30" />
+		<property name="end" value="2022/06/12 22:00" />
+		<property name="title" value="Cuarta" />
+		<property name="text" value="Sacar al perro" />
+		<property name="link" value="https://petclinic.com" />
+		<property name="visibility" value="true" />
+		<property name="workLoad" value="2.4" />
+	</bean>
+	
+	<bean id="task07" class="acme.entities.Task">
+		<property name="start" value="2022/06/13 21:30" />
+		<property name="end" value="2022/06/12 22:00" />
+		<property name="title" value="Quinta" />
+		<property name="text" value="Sacar al perro" />
+		<property name="link" value="https://petclinic.com" />
+		<property name="visibility" value="true" />
+		<property name="workLoad" value="2.4" />
+	</bean>
+	
+	<bean id="task08" class="acme.entities.Task">
+		<property name="start" value="2022/06/05 16:45" />
+		<property name="end" value="2022/06/05 18:20" />
+		<property name="title" value="Sexta" />
+		<property name="text" value="Limpiar el coche" />
+		<property name="link" value="https://comparmostucoche.es" />
+		<property name="visibility" value="true" />
+		<property name="workLoad" value="3.5" />
 	</bean>
 
 <!-- task creada y finalizada para comprobar el list taks de authenticated
