@@ -154,8 +154,8 @@
 	</bean>
 	
 	<bean id="task06" class="acme.entities.Task">
-		<property name="start" value="2022/06/13 21:30" />
-		<property name="end" value="2022/06/12 22:00" />
+		<property name="start" value="2022/06/12 21:30" />
+		<property name="end" value="2022/06/12 23:30" />
 		<property name="title" value="Cuarta" />
 		<property name="text" value="Sacar al perro" />
 		<property name="link" value="https://petclinic.com" />
@@ -164,7 +164,7 @@
 	</bean>
 	
 	<bean id="task07" class="acme.entities.Task">
-		<property name="start" value="2022/06/13 21:30" />
+		<property name="start" value="2022/06/12 20:30" />
 		<property name="end" value="2022/06/12 22:00" />
 		<property name="title" value="Quinta" />
 		<property name="text" value="Sacar al perro" />
