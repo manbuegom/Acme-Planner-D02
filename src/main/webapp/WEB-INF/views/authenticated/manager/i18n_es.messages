@@ -1,0 +1,22 @@
+# i18n_es.messages
+#
+# Copyright (C) 2012-2021 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+authenticated.task.form.title.create = Crear task
+
+authenticated.manager.task.label.start = Comienzo:
+authenticated.manager.task.label.end = Final:
+authenticated.manager.task.label.title = Titulo:
+authenticated.manager.task.label.text= Texto:
+authenticated.manager.task.label.link= Enlace:
+authenticated.manager.task.label.info= Informacion:
+authenticated.manager.task.label.visibility= Visible:
+
+authenticated.manager.task.button.create = Crear
+authenticated.manager.task.button.return = Volver
