@@ -20,4 +20,4 @@ authenticated.user-account.form.label.email = E-mail:
 authenticated.user-account.form.button.update = Actualizar
 authenticated.user-account.form.button.return = Volver
 
-authenticated.user-account.form.error.confirmation-no-match = La confirmación de la contraseña no cuadra
+authenticated.user-account.form.error.confirmation-no-match = La confirmación de la contraseña no coincide
