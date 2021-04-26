@@ -24,7 +24,7 @@
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.anonymous.task.list" action="/anonymous/task/list"/>
 			<acme:menu-separator/>
-			<acme:menu-suboption code="master.menu.anonymous.workplan.list" action="/anonymous/workplan/list"/>
+<%-- 			<acme:menu-suboption code="master.menu.anonymous.workplan.list" action="/anonymous/workplan/list"/> --%>
 		</acme:menu-option>
 		
 
