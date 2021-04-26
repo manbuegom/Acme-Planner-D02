@@ -183,19 +183,79 @@
 		<property name="workLoad" value="3.5" />
 	</bean>
 
-<!-- task creada y finalizada para comprobar el list taks de authenticated
+<!-- tasks creadas y finalizadas para comprobar el list tasks de authenticated, hay que comentar los @future de la entidad task antes de samplear
 
-	<bean id="task05" class="acme.entities.Task">
-		<property name="start" value="2020/04/26 12:30" />
-		<property name="end" value="2020/04/26 14:30" />
-		<property name="title" value="terminada" />
+	<bean id="task09" class="acme.entities.Task">
+		<property name="start" value="2020/04/25 12:30" />
+		<property name="end" value="2020/04/25 14:30" />
+		<property name="title" value="terminada1" />
 		<property name="text" value="Revisar los documentos" />
 		<property name="link" value="https://ferki.com" />
 		<property name="visibility" value="true" />
 		<property name="workLoad" value="2.0" />
 	</bean>
--->
-	<bean id="workplan01" class="acme.entities.WorkPlan">
+	
+		<bean id="task010" class="acme.entities.Task">
+		<property name="start" value="2020/04/25 12:30" />
+		<property name="end" value="2020/04/25 14:30" />
+		<property name="title" value="terminada2" />
+		<property name="text" value="Revisar los documentos" />
+		<property name="link" value="https://ferki.com" />
+		<property name="visibility" value="true" />
+		<property name="workLoad" value="2.0" />
+	</bean>
+	
+		<bean id="task011" class="acme.entities.Task">
+		<property name="start" value="2020/04/25 12:30" />
+		<property name="end" value="2020/04/25 14:30" />
+		<property name="title" value="terminada3" />
+		<property name="text" value="Revisar los documentos" />
+		<property name="link" value="https://ferki.com" />
+		<property name="visibility" value="true" />
+		<property name="workLoad" value="2.0" />
+	</bean>
+	
+		<bean id="task012" class="acme.entities.Task">
+		<property name="start" value="2020/04/25 12:30" />
+		<property name="end" value="2020/04/25 14:30" />
+		<property name="title" value="terminada4" />
+		<property name="text" value="Revisar los documentos" />
+		<property name="link" value="https://ferki.com" />
+		<property name="visibility" value="true" />
+		<property name="workLoad" value="2.0" />
+	</bean>
+	
+		<bean id="task013" class="acme.entities.Task">
+		<property name="start" value="2020/04/25 12:30" />
+		<property name="end" value="2020/04/25 14:30" />
+		<property name="title" value="terminada5" />
+		<property name="text" value="Revisar los documentos" />
+		<property name="link" value="https://ferki.com" />
+		<property name="visibility" value="true" />
+		<property name="workLoad" value="2.0" />
+	</bean>
+
+		<bean id="task014" class="acme.entities.Task">
+		<property name="start" value="2020/04/25 12:30" />
+		<property name="end" value="2020/04/25 14:30" />
+		<property name="title" value="terminada6" />
+		<property name="text" value="Revisar los documentos" />
+		<property name="link" value="https://ferki.com" />
+		<property name="visibility" value="true" />
+		<property name="workLoad" value="2.0" />
+	</bean>
+	
+			<bean id="task015" class="acme.entities.Task">
+		<property name="start" value="2020/04/25 12:30" />
+		<property name="end" value="2020/04/25 14:30" />
+		<property name="title" value="terminada7" />
+		<property name="text" value="Revisar los documentos" />
+		<property name="link" value="https://ferki.com" />
+		<property name="visibility" value="true" />
+		<property name="workLoad" value="2.0" />
+	</bean>
+-->	
+	<bean id="workplan014" class="acme.entities.WorkPlan">
 		<property name="start" value="2022/03/26 12:30" />
 		<property name="end" value="2022/05/26 14:30" />
 		<property name="visibility" value="true" />
