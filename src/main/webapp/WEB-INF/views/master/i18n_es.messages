@@ -55,6 +55,12 @@ master.menu.administrator.populate-initial = Poblar BD (inicial)
 master.menu.administrator.populate-sample = Poblar BD (ejemplos)
 master.menu.administrator.shutdown = Parar el sistema
 
+# master.menu.authenticated.manager ########################################################
+
+master.menu.authenticated.manager = Manager
+master.menu.authenticated.manager.create.task = Crear Task
+master.menu.authenticated.manager.list.task = Lista de Tasks
+
 # master.menu.provider ########################################################
 
 master.menu.provider = Proveedor

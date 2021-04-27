@@ -6,6 +6,7 @@ import java.util.Collection;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import acme.entities.Spam;
 import acme.entities.Task;
 import acme.framework.repositories.AbstractRepository;
 
@@ -22,6 +23,9 @@ public interface ManagerTaskRepository extends AbstractRepository {
     
     @Query("select t from Task t where t.visibility = true and t.end > ?1")
     Collection<Task> findPublicTasks(Date date);
+
+    @Query("select p from Spam p where p.threshold = 10")
+    Spam findSpam();
 
 }
 
