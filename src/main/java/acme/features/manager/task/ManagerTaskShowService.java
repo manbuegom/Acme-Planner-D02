@@ -1,4 +1,4 @@
- package acme.features.authenticated.manager.task;
+package acme.features.manager.task;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

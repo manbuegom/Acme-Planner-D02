@@ -1,4 +1,4 @@
-package acme.features.authenticated.manager.task;
+package acme.features.manager.task;
 
 import java.sql.Date;
 import java.time.LocalDate;

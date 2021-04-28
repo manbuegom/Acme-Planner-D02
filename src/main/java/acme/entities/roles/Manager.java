@@ -24,6 +24,9 @@ public class Manager extends UserRole {
 	@NotBlank
 	protected String			sector;
 	
+//	@OneToMany
+//	protected Collection<Task>	tasks;
+	
 	// Derived attributes -----------------------------------------------------
 
 	// Relationships ----------------------------------------------------------

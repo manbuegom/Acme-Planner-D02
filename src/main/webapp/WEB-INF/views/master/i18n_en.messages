@@ -55,11 +55,11 @@ master.menu.administrator.populate-initial = Populate DB (initial)
 master.menu.administrator.populate-sample = Populate DB (samples)
 master.menu.administrator.shutdown = Shut down
 
-# master.menu.authenticated.manager ########################################################
+# master.menu.manager ########################################################
 
-master.menu.authenticated.manager = Manager
-master.menu.authenticated.manager.create.tasks = Create Task
-master.menu.authenticated.manager.list.tasks = List Tasks
+master.menu.manager = Manager
+master.menu.manager.create.tasks = Create Task
+master.menu.manager.list.tasks = List Tasks
 
 # master.menu.provider ########################################################
 

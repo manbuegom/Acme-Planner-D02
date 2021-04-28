@@ -1,4 +1,4 @@
-package acme.features.authenticated.manager.task;
+package acme.features.manager.task;
 
 import java.util.Arrays;
 import java.util.Date;
@@ -53,8 +53,9 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 			model.setAttribute("title", "");
 			model.setAttribute("text", "");
 			model.setAttribute("link", "");
+			model.setAttribute("manager", "");
 		} else {
-			request.transfer(model, "start", "end", "title", "text","link");
+			request.transfer(model, "start", "end", "title", "text","link", "manager");
 		}
 
 	}
@@ -69,12 +70,15 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 		Task result;
 		result = new Task();
 		
+		final Manager manager = this.repository.findById(request.getPrincipal().getActiveRoleId());
+		
 		
 		result.setStart(start);
 		result.setEnd(end);
 		result.setTitle("");
 		result.setText("");
 		result.setLink("");
+		result.setManager(manager);
 
 		return result;
 	}

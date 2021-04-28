@@ -1,4 +1,4 @@
-package acme.features.authenticated.manager.task;
+package acme.features.manager.task;
 
 import java.sql.Date;
 import java.util.Collection;
@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import acme.entities.Spam;
 import acme.entities.Task;
+import acme.entities.roles.Manager;
 import acme.framework.repositories.AbstractRepository;
 
 @Repository
@@ -26,6 +27,12 @@ public interface ManagerTaskRepository extends AbstractRepository {
 
     @Query("select p from Spam p where p.threshold = 10")
     Spam findSpam();
+
+    @Query("select t from Task t where t.manager.id = ?1")
+	Collection<Task> findMyTasks(int managerId);
+    
+    @Query("select m from Manager m where m.id = ?1")
+    Manager findById(int managerId);
 
 }
 
