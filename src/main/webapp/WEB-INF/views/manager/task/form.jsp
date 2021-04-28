@@ -23,7 +23,11 @@
     <acme:form-url code="manager.task.label.info" path="link" />
     <acme:form-checkbox code="manager.task.label.visibility" path="visibility" /> 
 
-	<acme:form-submit test="${command == 'create'}" code="manager.task.button.create" action="/manager/task/create"/>
+	<acme:form-submit test="${command == 'create'}" 
+	code="manager.task.button.create" 
+	action="/manager/task/create"/>
+<%--	
 	<acme:form-submit test="${command == 'update'}" code="manager.task.button.update" action="/manager/task/update"/>
+--%>	
     <acme:form-return code="manager.task.button.return" />
 </acme:form>

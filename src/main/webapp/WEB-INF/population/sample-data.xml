@@ -162,7 +162,18 @@
 		<property name="title" value="Prueba manager" />
 		<property name="text" value="Revisar los documentos" />
 		<property name="link" value="https://ferki.com" />
-		<property name="visibility" value="true" />
+		<property name="visibility" value="false" />
+		<property name="workLoad" value="2.2" />
+		<property name="manager" ref="manager01" />
+	</bean>
+	
+	 <bean id="task07" class="acme.entities.Task">
+		<property name="start" value="2022/06/26 12:30" />
+		<property name="end" value="2022/07/26 14:30" />
+		<property name="title" value="Prueba manager2" />
+		<property name="text" value="Revisar el proyecto" />
+		<property name="link" value="https://ferki.com" />
+		<property name="visibility" value="false" />
 		<property name="workLoad" value="2.2" />
 		<property name="manager" ref="manager01" />
 	</bean>

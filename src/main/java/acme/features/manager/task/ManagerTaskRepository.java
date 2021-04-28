@@ -24,6 +24,9 @@ public interface ManagerTaskRepository extends AbstractRepository {
     
     @Query("select t from Task t where t.visibility = true and t.end > ?1")
     Collection<Task> findPublicTasks(Date date);
+    
+    @Query("select t from Task t where t.visibility = false and t.manager.id = ?1")
+    Collection<Task> findMyPrivateTasks(int managerId);
 
     @Query("select p from Spam p where p.threshold = 10")
     Spam findSpam();

@@ -1,7 +1,5 @@
 package acme.features.manager.task;
 
-import java.sql.Date;
-import java.time.LocalDate;
 import java.util.Collection;
 import java.util.Comparator;
 import java.util.stream.Collectors;
@@ -35,7 +33,7 @@ public class ManagerTaskListService implements AbstractListService<Manager, Task
 		assert entity != null;
 		assert model!= null;
 		
-		request.unbind(entity, model,  "start", "end", "title", "text","link");
+		request.unbind(entity, model,  "start", "end", "title", "text","link", "visibility");
 	}
 
 	@Override
@@ -44,10 +42,12 @@ public class ManagerTaskListService implements AbstractListService<Manager, Task
 
 		final Collection<Task> result;
 				
-		final Date date = Date.valueOf(LocalDate.now());
+//		final Date date = Date.valueOf(LocalDate.now());
+		final Integer id = request.getPrincipal().getActiveRoleId();
 		
-		//ordena los resultados de mayor a menor carga de workload, si se quiere al reves añadir el .reversed() en el comparator
-		result = this.repository.findPublicTasks(date).stream().sorted(Comparator.comparing(Task::getWorkLoad)).collect(Collectors.toList());
+		
+		result = this.repository.findMyPrivateTasks(id).stream()
+			.sorted(Comparator.comparing(Task::getWorkLoad)).collect(Collectors.toList());
 		
 		return result;
 	}
