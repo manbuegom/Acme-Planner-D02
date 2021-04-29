@@ -8,8 +8,9 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-administrator.spam.label.spam = Palabras Spam:
+administrator.spam.label.words = Palabras Spam:
 administrator.spam.label.threshold = Umbral de Spam:
 
-administrator.spam.label.update = Actualizar
+administrator.spam.label.update = Añadir palabra
+administrator.spam.label.remove = Borrar palabra
 administrator.spam.button.return = Volver

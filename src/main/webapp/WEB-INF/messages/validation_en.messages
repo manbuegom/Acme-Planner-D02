@@ -43,3 +43,5 @@ acme.validation.range = Must be between {0} and {1}
 acme.validation.script = Script expression "{0}" must return true
 
 anonymous.shout.error.shout-spam = Your message contains spam words
+administrator.word.error.exists = Your word already exists
+administrator.word.error.notfound = We couldn't find that word in the list

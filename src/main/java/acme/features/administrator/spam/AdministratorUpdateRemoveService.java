@@ -1,15 +1,3 @@
-/*
- * AdministratorUserAccountUpdateService.java
- *
- * Copyright (C) 2012-2021 Rafael Corchuelo.
- *
- * In keeping with the traditional purpose of furthering education and research, it is
- * the policy of the copyright owner to permit non-commercial use and redistribution of
- * this software. It has been tested carefully, but it is not guaranteed for any particular
- * purposes. The copyright owner does not offer any warranties or representations, nor do
- * they accept any liabilities with respect to them.
- */
-
 package acme.features.administrator.spam;
 
 import java.util.List;
@@ -27,14 +15,11 @@ import acme.framework.entities.Administrator;
 import acme.framework.services.AbstractUpdateService;
 
 @Service
-public class AdministratorSpamUpdateService implements AbstractUpdateService<Administrator, Spam> {
+public class AdministratorUpdateRemoveService  implements AbstractUpdateService<Administrator, Spam> {
 
-	// Internal state ---------------------------------------------------------
 
 	@Autowired
 	protected AdministratorSpamRepository repository;
-
-	// AbstractUpdateService<Administrator, UserAccount> interface -------------
 
 
 	@Override
@@ -77,7 +62,7 @@ public class AdministratorSpamUpdateService implements AbstractUpdateService<Adm
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-
+		
 		final String palabra = request.getModel().getString("newword");
 		
 		boolean exists = false;
@@ -89,7 +74,7 @@ public class AdministratorSpamUpdateService implements AbstractUpdateService<Adm
 				break;
 			}
 		}
-		errors.state(request, !exists, "newword", "administrator.word.error.exists");
+		errors.state(request, exists, "newword", "administrator.word.error.notfound");
 
 	}
 
@@ -100,10 +85,15 @@ public class AdministratorSpamUpdateService implements AbstractUpdateService<Adm
 
 		final String newWord = request.getModel().getString("newword");
 		final List<Word> palabras = entity.getWords();
+
 		if (!newWord.equals("")) {
-			final Word word = new Word(newWord.trim().toLowerCase());
-			palabras.add(word);
-			entity.setWords(palabras);
+				for(final Word pal: palabras) {
+					if(pal.getWord().equals(newWord)) {
+						palabras.remove(pal);
+						break;
+					}
+				}
+				entity.setWords(palabras);
 		}
 		this.repository.save(entity);
 	}

@@ -8,8 +8,11 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-administrator.spam.label.spam = Spam's words:
+administrator.spam.label.words = Spam's words:
 administrator.spam.label.threshold = Spam's threshold:
 
-administrator.spam.label.update = Update
+administrator.spam.label.update = Add word
+administrator.spam.label.remove = Remove word
 administrator.spam.button.return = Return
+
+administrator.configuration.error.duplicated

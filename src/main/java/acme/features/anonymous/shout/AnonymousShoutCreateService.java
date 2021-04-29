@@ -1,14 +1,12 @@
 
 package acme.features.anonymous.shout;
 
-import java.util.Arrays;
 import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.Shout;
-import acme.entities.Spam;
 import acme.framework.components.Errors;
 import acme.framework.components.HttpMethod;
 import acme.framework.components.Model;
@@ -81,20 +79,20 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		assert entity != null;
 		assert errors != null;
 
-		final int textLength = request.getModel().getString("text").length();
-		errors.state(request, textLength > 0 && textLength <= 100, "text", "acme.validation.length", 1, 100);
-
-		final int authorLength = request.getModel().getString("author").length();
-		errors.state(request, authorLength >= 5 && authorLength <= 25, "author", "acme.validation.length", 5, 25);
-
-		final Spam s = this.repository.findSpam();
-		final String[] sp = s.getSpam().split(",");
-
-		final int spamText = (int) (Arrays.asList(sp).stream().filter(x -> entity.getText().toLowerCase().contains(x.toLowerCase().trim())).count() * 100 / sp.length);
-		final int spamAuthor = (int) (Arrays.asList(sp).stream().filter(x -> entity.getAuthor().toLowerCase().contains(x.toLowerCase().trim())).count() * 100 / sp.length);
-
-		final boolean isShoutSpam = (spamText  + spamAuthor) < s.getThreshold();
-		errors.state(request, isShoutSpam, "text", "anonymous.shout.error.shout-spam");
+//		final int textLength = request.getModel().getString("text").length();
+//		errors.state(request, textLength > 0 && textLength <= 100, "text", "acme.validation.length", 1, 100);
+//
+//		final int authorLength = request.getModel().getString("author").length();
+//		errors.state(request, authorLength >= 5 && authorLength <= 25, "author", "acme.validation.length", 5, 25);
+//
+//		final Spam s = this.repository.findSpam();
+//		final String[] sp = s.getSpam().split(",");
+//
+//		final int spamText = (int) (Arrays.asList(sp).stream().filter(x -> entity.getText().toLowerCase().contains(x.toLowerCase().trim())).count() * 100 / sp.length);
+//		final int spamAuthor = (int) (Arrays.asList(sp).stream().filter(x -> entity.getAuthor().toLowerCase().contains(x.toLowerCase().trim())).count() * 100 / sp.length);
+//
+//		final boolean isShoutSpam = (spamText  + spamAuthor) < s.getThreshold();
+//		errors.state(request, isShoutSpam, "text", "anonymous.shout.error.shout-spam");
 
 	}
 

@@ -16,15 +16,31 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 
-<acme:form readonly='false'>
+<acme:form>
+	<jstl:if test="${command == 'update'}">
 
-	<acme:form-textbox code="administrator.spam.label.spam" path="spam" />
-	<acme:form-double code="administrator.spam.label.threshold"
-		path="threshold" />
+		<acme:form-textbox code="administrator.spam.label.words"
+			path="newword" />
+		<acme:form-double code="administrator.spam.label.threshold"
+			path="threshold" />
 
-	<acme:form-submit test="${command == 'update'}"
-		code="administrator.spam.label.update"
-		action="/administrator/spam/update" />
+		<acme:form-submit code="administrator.spam.label.update"
+			action="/administrator/spam/update" />
+
+		<acme:form-submit code="administrator.spam.label.remove"
+			action="/administrator/spam/spam_remove_word" />
+			
+
+	</jstl:if>
+
+	<jstl:if test="${command == 'show'}">
+
+		<acme:form-textarea code="administrator.spam.label.words"
+			path="palabras" readonly="true" />
+		<acme:form-double code="administrator.spam.label.threshold"
+			path="threshold" readonly="true" />
+
+	</jstl:if>
 
 	<acme:form-return code="administrator.spam.button.return" />
 

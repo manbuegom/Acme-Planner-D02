@@ -24,7 +24,6 @@
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.anonymous.task.list" action="/anonymous/task/list"/>
 			<acme:menu-separator/>
-<%-- 			<acme:menu-suboption code="master.menu.anonymous.workplan.list" action="/anonymous/workplan/list"/> --%>
 		</acme:menu-option>
 		
 
@@ -38,6 +37,12 @@
 			<acme:menu-suboption code="master.menu.administrator.populate-initial" action="/master/populate-initial"/>
 			<acme:menu-suboption code="master.menu.administrator.populate-sample" action="/master/populate-sample"/>			
 			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.administrator.spam.update"
+                action="/administrator/spam/update" />
+            <acme:menu-separator />
+            <acme:menu-suboption code="master.menu.administrator.spam.show"
+                action="/administrator/spam/show" />
+            <acme:menu-separator />
 			<acme:menu-suboption code="master.menu.administrator.dashboard" action="/administrator/dashboard/show"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.shutdown" action="/master/shutdown"/>
