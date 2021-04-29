@@ -18,27 +18,12 @@
 
 
 <acme:form>
-
-	<jstl:if test="${command == 'create' }">	
-	
 		<acme:form-textbox code="anonymous.shout.label.author" path="author" />
 		<acme:form-textarea code="anonymous.shout.label.text" path="text" />
 		<acme:form-url code="anonymous.shout.label.info" path="info" />
 
 		<acme:form-submit code="anonymous.shout.button.create"
 		action="/anonymous/shout/create" />
-	
-	</jstl:if>
-	
-	<jstl:if test="${command == 'show'}">
-		<acme:form readonly = 'true'>
-		
-		<acme:form-textbox code="anonymous.shout.label.author" path="author" />
-		<acme:form-textarea code="anonymous.shout.label.text" path="text" />
-		<acme:form-url code="anonymous.shout.label.info" path="info" />
-			
-		</acme:form>
-	</jstl:if>
 	
 	<acme:form-return code="anonymous.shout.button.return" />
 	
