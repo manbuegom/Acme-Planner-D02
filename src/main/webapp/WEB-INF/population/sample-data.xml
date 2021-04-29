@@ -235,6 +235,58 @@
 		<property name="workLoad" value="2.0" />
 	</bean>
 
+	<bean name="managerUserAccount01" class="acme.framework.entities.UserAccount">
+        <property name="username" value="manager01" />
+        <property name="password" value="manager01" />
+        <property name="enabled" value="true" />
+        <property name="identity">
+            <bean class="acme.datatypes.UserIdentity">
+                <property name="name" value="manager" />
+                <property name="surname" value="manager" />
+                <property name="email" value="manager@acme.com" />
+            </bean>
+        </property>
+        <property name="roles">
+            <list>
+                <ref bean="manager01" />
+                <ref bean="managerAuthenticated01"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean name="manager01" class="acme.entities.roles.Manager">
+        <property name="userAccount" ref="managerUserAccount01" />
+        <property name= "company" value= "managerComp"/>
+        <property name= "sector" value= "managerSector"/>
+    </bean>
+
+    <bean name="managerAuthenticated01" class="acme.framework.entities.Authenticated">
+        <property name="userAccount" ref="managerUserAccount01" />
+    </bean>
+    
+    <bean id="task06" class="acme.entities.Task">
+		<property name="start" value="2022/04/26 12:30" />
+		<property name="end" value="2022/04/26 14:30" />
+		<property name="title" value="Prueba manager" />
+		<property name="text" value="Revisar los documentos" />
+		<property name="link" value="https://ferki.com" />
+		<property name="visibility" value="false" />
+		<property name="workLoad" value="2.2" />
+		<property name="manager" ref="manager01" />
+	</bean>
+	
+	 <bean id="task07" class="acme.entities.Task">
+		<property name="start" value="2022/06/26 12:30" />
+		<property name="end" value="2022/07/26 14:30" />
+		<property name="title" value="Prueba manager2" />
+		<property name="text" value="Revisar el proyecto" />
+		<property name="link" value="https://ferki.com" />
+		<property name="visibility" value="false" />
+		<property name="workLoad" value="2.2" />
+		<property name="manager" ref="manager01" />
+	</bean>
+
+
 		<bean id="task014" class="acme.entities.Task">
 		<property name="start" value="2020/04/25 12:30" />
 		<property name="end" value="2020/04/25 14:30" />
@@ -260,4 +312,5 @@
 		<property name="end" value="2022/05/26 14:30" />
 		<property name="visibility" value="true" />
 	</bean>
+
 </beans>
