@@ -20,3 +20,5 @@ manager.task.label.visibility= Visibility:
 
 manager.task.button.create = Create
 manager.task.button.return = Return
+manager.task.button.update = Update
+manager.task.button.delete= Delete

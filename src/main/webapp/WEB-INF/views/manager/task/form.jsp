@@ -15,7 +15,7 @@
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
-<acme:form> 
+<acme:form readonly="false">
     <acme:form-moment code="manager.task.label.start" path="start" />
     <acme:form-moment code="manager.task.label.end" path="end" />
     <acme:form-textbox code="manager.task.label.title" path="title" />
@@ -26,8 +26,14 @@
 	<acme:form-submit test="${command == 'create'}" 
 	code="manager.task.button.create" 
 	action="/manager/task/create"/>
-<%--	
-	<acme:form-submit test="${command == 'update'}" code="manager.task.button.update" action="/manager/task/update"/>
---%>	
+
+	<acme:form-submit test="${command == 'show'}" 
+	code="manager.task.button.update" 
+	action="/manager/task/update"/>
+	
+		<acme:form-submit test="${command == 'show'}" 
+	code="manager.task.button.delete" 
+	action="/manager/task/delete"/>
+	
     <acme:form-return code="manager.task.button.return" />
 </acme:form>

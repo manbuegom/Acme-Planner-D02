@@ -36,6 +36,7 @@ public interface ManagerTaskRepository extends AbstractRepository {
     
     @Query("select m from Manager m where m.id = ?1")
     Manager findById(int managerId);
-
+    
+    
 }
 

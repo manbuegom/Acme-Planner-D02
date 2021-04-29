@@ -20,10 +20,6 @@ public class ManagerTaskController extends AbstractController<Manager, Task> {
 	@Autowired
 	protected ManagerTaskListService listService;
 	
-//	@Autowired
-//	protected ManagerTaskListMineService listService;
-//	
-	
 	@Autowired
 	protected ManagerTaskCreateService createService;
 	
@@ -32,14 +28,17 @@ public class ManagerTaskController extends AbstractController<Manager, Task> {
 
 	@Autowired
 	protected ManagerTaskUpdateService updateService;
+	
+	@Autowired
+	protected ManagerTaskDeleteService deleteService;
 
 	@PostConstruct
 	protected void initialise() {
-//		super.addCustomCommand(CustomCommand.LIST_MINE, BasicCommand.LIST, this.listService);
 		super.addBasicCommand(BasicCommand.LIST, this.listService);
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 		super.addBasicCommand(BasicCommand.UPDATE, this.updateService);
 		super.addBasicCommand(BasicCommand.CREATE, this.createService);
+		super.addBasicCommand(BasicCommand.DELETE, this.deleteService);
 	}
 
 }

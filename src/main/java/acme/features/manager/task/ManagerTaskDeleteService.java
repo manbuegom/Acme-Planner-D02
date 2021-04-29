@@ -8,9 +8,9 @@ import acme.entities.roles.Manager;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.services.AbstractUpdateService;
+import acme.framework.services.AbstractDeleteService;
 @Service
-public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, Task>{
+public class ManagerTaskDeleteService implements AbstractDeleteService<Manager, Task>{
 	
 	@Autowired
 	protected ManagerTaskRepository repository;
@@ -60,11 +60,10 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 	}
 
 	@Override
-	public void update(final Request<Task> request, final Task entity) {
+	public void delete(final Request<Task> request, final Task entity) {
 		assert request != null;
 		assert entity != null;
-
-		this.repository.save(entity);
+		this.repository.delete(entity);
 		
 	}
 
