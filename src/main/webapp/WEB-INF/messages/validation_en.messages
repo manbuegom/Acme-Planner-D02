@@ -44,3 +44,5 @@ acme.validation.script = Script expression "{0}" must return true
 acme.validation.date = End date must be after start date
 
 anonymous.shout.error.shout-spam = Your message contains spam words
+administrator.word.error.exists = Your word already exists
+administrator.word.error.notfound = We couldn't find that word in the list

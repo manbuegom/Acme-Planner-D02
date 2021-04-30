@@ -14,10 +14,35 @@
 
 	<import
 		resource="classpath:/WEB-INF/population/conversion-service.xml" />
-		
+
 	<bean id="spam01" class="acme.entities.Spam">
-		<property name="spam"
-			value="sex, hard core, viagra, cialis, nigeria, you’ve won, million dollar, sexo, has ganado, millón de dólares" />
+		<property name="words">
+			<list>
+				<bean class="acme.entities.Word">
+					<property name="word" value="sex" />
+				</bean>
+
+				<bean class="acme.entities.Word">
+					<property name="word" value="sexo" />
+				</bean>
+
+				<bean class="acme.entities.Word">
+					<property name="word" value="hard core" />
+				</bean>
+
+				<bean class="acme.entities.Word">
+					<property name="word" value="duro" />
+				</bean>
+
+				<bean class="acme.entities.Word">
+					<property name="word" value="viagra" />
+				</bean>
+
+				<bean class="acme.entities.Word">
+					<property name="word" value="cialis" />
+				</bean>
+			</list>
+		</property>
 		<property name="threshold" value="10.0" />
 	</bean>
 
@@ -30,7 +55,7 @@
 		</property>
 	</bean>
 
- 	<bean id="shout02" class="acme.entities.Shout">
+	<bean id="shout02" class="acme.entities.Shout">
 		<property name="moment" value="2020/11/03 15:09" />
 		<property name="author" value="JavierR" />
 		<property name="text" value="Prueba de Javier" />
@@ -45,74 +70,77 @@
 		<property name="text" value="Prueba de fernando" />
 		<property name="info" value="https://ferki.com" />
 	</bean>
-	
+
 	<bean id="shout04" class="acme.entities.Shout">
 		<property name="moment" value="2021/04/19 23:34" />
 		<property name="author" value="Manuel" />
 		<property name="text" value="Shout de Manuel." />
 		<property name="info" value="https://manuelb.com" />
 	</bean>
-	
+
 	<bean id="shout05" class="acme.entities.Shout">
 		<property name="moment" value="2021/04/19 12:34" />
 		<property name="author" value="Pablo Santos" />
 		<property name="text" value="Flammingo es con doble m." />
 		<property name="info" value="https://flammingo.com" />
 	</bean>
-	
+
 	<bean id="shout06" class="acme.entities.Shout">
 		<property name="moment" value="2021/04/20 11:34" />
 		<property name="author" value="Enrique" />
 		<property name="text" value="Busco zapatillas nike" />
 		<property name="info" value="https://buscozapas.com" />
 	</bean>
-	
+
 	<bean id="shout07" class="acme.entities.Shout">
 		<property name="moment" value="2021/04/24 11:29" />
 		<property name="author" value="Miguel Campello" />
 		<property name="text" value="De colores son" />
 		<property name="info" value="https://elbicho.com" />
 	</bean>
-	
+
 	<bean id="shout08" class="acme.entities.Shout">
 		<property name="moment" value="2021/04/24 11:31" />
 		<property name="author" value="Maynard Keenan" />
 		<property name="text" value="¿Qué pasa contigo?" />
 		<property name="info" value="https://tool.com" />
 	</bean>
-	
+
 	<bean id="shout09" class="acme.entities.Shout">
 		<property name="moment" value="2021/04/24 11:33" />
 		<property name="author" value="Isabel Cea" />
-		<property name="text" value="De la monarquía a la criptocracia" />
+		<property name="text"
+			value="De la monarquía a la criptocracia" />
 		<property name="info" value="https://tab.com" />
 	</bean>
-	
+
 	<bean id="shout10" class="acme.entities.Shout">
 		<property name="moment" value="2021/04/23 03:43" />
 		<property name="author" value="Thom Yorke" />
 		<property name="text" value="Estoy un poco triste" />
 		<property name="info" value="https://letdown.com" />
 	</bean>
-	
-	
+
+
+
+
 	<bean id="dashboard1" class="acme.entities.Dashboard">
 		<property name="numberOfFinishedTasks" value="5" />
 		<property name="numberOfPrivateTasks" value="8" />
 		<property name="numberOfPublicTasks" value="3" />
 		<property name="numberOfNonFinishedTasks" value="2" />
 	</bean>
-	
+
 	<bean id="task01" class="acme.entities.Task">
 		<property name="start" value="2022/02/26 12:30" />
-		<property name="end" value="2022/03/02 12:30"/>
+		<property name="end" value="2022/03/02 12:30" />
 		<property name="title" value="Tarea de Juan José" />
 		<property name="text" value="Revisar las tareas de Pepe" />
 		<property name="link" value="https://pablete.com" />
 		<property name="visibility" value="false" />
 		<property name="workLoad" value="2.5" />
 	</bean>
-	
+
 	<bean id="task02" class="acme.entities.Task">
 		<property name="start" value="2022/04/26 12:30" />
 		<property name="end" value="2022/04/29 12:30" />
@@ -122,8 +150,8 @@
 		<property name="visibility" value="true" />
 		<property name="workLoad" value="1.5" />
 	</bean>
-	
-		<bean id="task03" class="acme.entities.Task">
+
+	<bean id="task03" class="acme.entities.Task">
 		<property name="start" value="2022/04/26 12:30" />
 		<property name="end" value="2022/04/26 13:30" />
 		<property name="title" value="Primera" />
@@ -132,8 +160,8 @@
 		<property name="visibility" value="true" />
 		<property name="workLoad" value="1.8" />
 	</bean>
-	
-		<bean id="task04" class="acme.entities.Task">
+
+	<bean id="task04" class="acme.entities.Task">
 		<property name="start" value="2022/07/26 12:30" />
 		<property name="end" value="2022/07/26 14:30" />
 		<property name="title" value="Segunda" />
@@ -142,7 +170,7 @@
 		<property name="visibility" value="true" />
 		<property name="workLoad" value="2.2" />
 	</bean>
-	
+
 	<bean id="task05" class="acme.entities.Task">
 		<property name="start" value="2022/04/26 13:30" />
 		<property name="end" value="2022/04/26 14:30" />
@@ -152,7 +180,7 @@
 		<property name="visibility" value="true" />
 		<property name="workLoad" value="1.2" />
 	</bean>
-	
+
 	<bean id="task06" class="acme.entities.Task">
 		<property name="start" value="2022/06/12 21:30" />
 		<property name="end" value="2022/06/12 23:30" />
@@ -162,7 +190,7 @@
 		<property name="visibility" value="true" />
 		<property name="workLoad" value="2.4" />
 	</bean>
-	
+
 	<bean id="task07" class="acme.entities.Task">
 		<property name="start" value="2022/06/12 20:30" />
 		<property name="end" value="2022/06/12 22:00" />
@@ -172,7 +200,7 @@
 		<property name="visibility" value="true" />
 		<property name="workLoad" value="2.4" />
 	</bean>
-	
+
 	<bean id="task08" class="acme.entities.Task">
 		<property name="start" value="2022/06/05 16:45" />
 		<property name="end" value="2022/06/05 18:20" />
@@ -183,7 +211,6 @@
 		<property name="workLoad" value="3.5" />
 	</bean>
 
-<!-- tasks creadas y finalizadas para comprobar el list tasks de authenticated, hay que comentar los @future de la entidad task antes de samplear
 
 	<bean id="task09" class="acme.entities.Task">
 		<property name="start" value="2020/04/25 12:30" />
@@ -194,8 +221,8 @@
 		<property name="visibility" value="true" />
 		<property name="workLoad" value="2.0" />
 	</bean>
-	
-		<bean id="task010" class="acme.entities.Task">
+
+	<bean id="task010" class="acme.entities.Task">
 		<property name="start" value="2020/04/25 12:30" />
 		<property name="end" value="2020/04/25 14:30" />
 		<property name="title" value="terminada2" />
@@ -204,8 +231,8 @@
 		<property name="visibility" value="true" />
 		<property name="workLoad" value="2.0" />
 	</bean>
-	
-		<bean id="task011" class="acme.entities.Task">
+
+	<bean id="task011" class="acme.entities.Task">
 		<property name="start" value="2020/04/25 12:30" />
 		<property name="end" value="2020/04/25 14:30" />
 		<property name="title" value="terminada3" />
@@ -214,8 +241,8 @@
 		<property name="visibility" value="true" />
 		<property name="workLoad" value="2.0" />
 	</bean>
-	
-		<bean id="task012" class="acme.entities.Task">
+
+	<bean id="task012" class="acme.entities.Task">
 		<property name="start" value="2020/04/25 12:30" />
 		<property name="end" value="2020/04/25 14:30" />
 		<property name="title" value="terminada4" />
@@ -224,8 +251,8 @@
 		<property name="visibility" value="true" />
 		<property name="workLoad" value="2.0" />
 	</bean>
-	
-		<bean id="task013" class="acme.entities.Task">
+
+	<bean id="task013" class="acme.entities.Task">
 		<property name="start" value="2020/04/25 12:30" />
 		<property name="end" value="2020/04/25 14:30" />
 		<property name="title" value="terminada5" />
@@ -287,7 +314,7 @@
 	</bean>
 
 
-		<bean id="task014" class="acme.entities.Task">
+	<bean id="task014" class="acme.entities.Task">
 		<property name="start" value="2020/04/25 12:30" />
 		<property name="end" value="2020/04/25 14:30" />
 		<property name="title" value="terminada6" />
@@ -296,8 +323,8 @@
 		<property name="visibility" value="true" />
 		<property name="workLoad" value="2.0" />
 	</bean>
-	
-			<bean id="task015" class="acme.entities.Task">
+
+	<bean id="task015" class="acme.entities.Task">
 		<property name="start" value="2020/04/25 12:30" />
 		<property name="end" value="2020/04/25 14:30" />
 		<property name="title" value="terminada7" />
@@ -306,11 +333,5 @@
 		<property name="visibility" value="true" />
 		<property name="workLoad" value="2.0" />
 	</bean>
--->	
-	<bean id="workplan014" class="acme.entities.WorkPlan">
-		<property name="start" value="2022/03/26 12:30" />
-		<property name="end" value="2022/05/26 14:30" />
-		<property name="visibility" value="true" />
-	</bean>
-
+  
 </beans>

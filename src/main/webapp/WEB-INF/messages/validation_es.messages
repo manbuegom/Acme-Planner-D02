@@ -44,3 +44,5 @@ acme.validation.script = El script "{0}" debe devolver true
 acme.validation.date = La fecha de final debe ser posterior a la inicial
 
 anonymous.shout.error.shout-spam = Tu shout contiene palabras consideradas Spam
+administrator.word.error.exists = Esa palabra ya existe
+administrator.word.error.notfound = No se ha encontrado esa palabra en la lista
