@@ -17,4 +17,6 @@ import acme.framework.components.Command;
 public enum CustomCommand implements Command {
 
 	SPAM_REMOVE_WORD;
+	LIST_MINE;
+
 }
