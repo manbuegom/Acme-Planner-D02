@@ -41,6 +41,26 @@
 				<bean class="acme.entities.Word">
 					<property name="word" value="cialis" />
 				</bean>
+				
+				<bean class="acme.entities.Word">
+					<property name="word" value="nigeria" />
+				</bean>
+				
+				<bean class="acme.entities.Word">
+					<property name="word" value="you've won" />
+				</bean>
+				
+				<bean class="acme.entities.Word">
+					<property name="word" value="has ganado" />
+				</bean>
+				
+				<bean class="acme.entities.Word">
+					<property name="word" value="million dollar" />
+				</bean>
+				
+				<bean class="acme.entities.Word">
+					<property name="word" value="millón de dólares" />
+				</bean>
 			</list>
 		</property>
 		<property name="threshold" value="10.0" />
@@ -291,7 +311,7 @@
         <property name="userAccount" ref="managerUserAccount01" />
     </bean>
     
-    <bean id="task06" class="acme.entities.Task">
+    <bean id="task14" class="acme.entities.Task">
 		<property name="start" value="2022/04/26 12:30" />
 		<property name="end" value="2022/04/26 14:30" />
 		<property name="title" value="Prueba manager" />
@@ -302,7 +322,7 @@
 		<property name="manager" ref="manager01" />
 	</bean>
 	
-	 <bean id="task07" class="acme.entities.Task">
+	 <bean id="task15" class="acme.entities.Task">
 		<property name="start" value="2022/06/26 12:30" />
 		<property name="end" value="2022/07/26 14:30" />
 		<property name="title" value="Prueba manager2" />
@@ -314,7 +334,7 @@
 	</bean>
 
 
-	<bean id="task014" class="acme.entities.Task">
+	<bean id="task16" class="acme.entities.Task">
 		<property name="start" value="2020/04/25 12:30" />
 		<property name="end" value="2020/04/25 14:30" />
 		<property name="title" value="terminada6" />
@@ -324,7 +344,7 @@
 		<property name="workLoad" value="2.0" />
 	</bean>
 
-	<bean id="task015" class="acme.entities.Task">
+	<bean id="task17" class="acme.entities.Task">
 		<property name="start" value="2020/04/25 12:30" />
 		<property name="end" value="2020/04/25 14:30" />
 		<property name="title" value="terminada7" />
