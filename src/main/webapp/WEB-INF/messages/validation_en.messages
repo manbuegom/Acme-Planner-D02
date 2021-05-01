@@ -42,6 +42,8 @@ acme.validation.length = Length must be between {0} and {1}
 acme.validation.range = Must be between {0} and {1}
 acme.validation.script = Script expression "{0}" must return true
 acme.validation.date = End date must be after start date
+acme.validation.dateStart = Start date must be future
+acme.validation.notNullDate = Both dates must be completed
 
 anonymous.shout.error.shout-spam = Your message contains spam words
 administrator.word.error.exists = Your word already exists

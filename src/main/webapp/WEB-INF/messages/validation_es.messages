@@ -42,6 +42,8 @@ acme.validation.length = La longitud debe ser entre {0} y {1}
 acme.validation.range = Debe estar entre {0} y {1}
 acme.validation.script = El script "{0}" debe devolver true
 acme.validation.date = La fecha de final debe ser posterior a la inicial
+acme.validation.dateStart = La fecha de inicio debe ser en futuro
+acme.validation.notNullDate = Ambas fechas deben estar completas
 
 anonymous.shout.error.shout-spam = Tu shout contiene palabras consideradas Spam
 administrator.word.error.exists = Esa palabra ya existe
