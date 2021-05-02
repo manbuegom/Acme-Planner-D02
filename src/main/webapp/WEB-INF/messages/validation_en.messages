@@ -49,3 +49,4 @@ administrator.word.error.exists = Your word already exists
 administrator.word.error.notfound = We couldn't find that word in the list
 manager.task.error.task-date = Date can't be empty
 manager.task.error.task-dateAfter = End date must be after Start date
+manager.task.error.task-parse = You must enter a valid date

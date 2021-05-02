@@ -48,7 +48,6 @@
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.spam.update"
                 action="/administrator/spam/update" />
-            <acme:menu-separator />
             <acme:menu-suboption code="master.menu.administrator.spam.show"
                 action="/administrator/spam/show" />
             <acme:menu-separator />

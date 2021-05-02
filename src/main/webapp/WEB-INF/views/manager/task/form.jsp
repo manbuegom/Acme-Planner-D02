@@ -16,25 +16,62 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:form readonly="false">
-    <acme:form-moment code="manager.task.label.start" path="start" />
-    <acme:form-moment code="manager.task.label.end" path="end" />
-    <acme:form-textbox code="manager.task.label.title" path="title" />
-    <acme:form-textarea code="manager.task.label.text" path="text" />
-    <acme:form-url code="manager.task.label.info" path="link" />
-    <acme:form-checkbox code="manager.task.label.visibility" path="visibility" /> 
-    <acme:form-double code="manager.task.label.workload" path="workLoad" />
 
-	<acme:form-submit test="${command == 'create'}" 
-	code="manager.task.button.create" 
-	action="/manager/task/create"/>
+	<jstl:if test="${command == 'show'}">
 
-	<acme:form-submit test="${command == 'show'}" 
-	code="manager.task.button.update" 
-	action="/manager/task/update"/>
-	
-		<acme:form-submit test="${command == 'show'}" 
-	code="manager.task.button.delete" 
-	action="/manager/task/delete"/>
-	
-    <acme:form-return code="manager.task.button.return" />
+		<acme:form-moment code="manager.task.label.start" path="start" />
+		<acme:form-moment code="manager.task.label.end" path="end" />
+		<acme:form-textbox code="manager.task.label.title" path="title" />
+		<acme:form-textarea code="manager.task.label.text" path="text" />
+		<acme:form-url code="manager.task.label.info" path="link" />
+		<acme:form-checkbox code="manager.task.label.visibility"
+			path="visibility" />
+		<acme:form-double code="manager.task.label.workLoad" path="workLoad" />
+
+
+		<acme:form-submit code="manager.task.button.update"
+			action="/manager/task/update" />
+
+		<acme:form-submit code="manager.task.button.delete"
+			action="/manager/task/delete" />
+
+	</jstl:if>
+
+	<jstl:if test="${command == 'create'}">
+
+		<acme:form-moment code="manager.task.label.start" path="start" />
+		<acme:form-moment code="manager.task.label.end" path="end" />
+		<acme:form-textbox code="manager.task.label.title" path="title" />
+		<acme:form-textarea code="manager.task.label.text" path="text" />
+		<acme:form-url code="manager.task.label.info" path="link" />
+		<acme:form-checkbox code="manager.task.label.visibility"
+			path="visibility" />
+		<acme:form-double code="manager.task.label.workLoad" path="workLoad" />
+
+		<acme:form-submit code="manager.task.button.create"
+			action="/manager/task/create" />
+
+	</jstl:if>
+
+
+	<jstl:if test="${command == 'update'}">
+
+		<acme:form-moment code="manager.task.label.start" path="start" />
+		<acme:form-moment code="manager.task.label.end" path="end" />
+		<acme:form-textbox code="manager.task.label.title" path="title" />
+		<acme:form-textarea code="manager.task.label.text" path="text" />
+		<acme:form-url code="manager.task.label.info" path="link" />
+		<acme:form-checkbox code="manager.task.label.visibility"
+			path="visibility" />
+		<acme:form-double code="manager.task.label.workLoad" path="workLoad" />
+
+		<acme:form-submit code="manager.task.button.update"
+			action="/manager/task/update" />
+
+		<acme:form-submit code="manager.task.button.delete"
+			action="/manager/task/delete" />
+
+	</jstl:if>
+
+	<acme:form-return code="manager.task.button.return" />
 </acme:form>

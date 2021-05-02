@@ -17,10 +17,11 @@
 
 <acme:list>
 
-    <acme:list-column  code="authenticated.task.label.title" path="title" width="20%"/>
-    <acme:list-column code="authenticated.task.label.start" path="start" width="20%"/>
+    <acme:list-column  code="authenticated.task.label.title" path="title" width="15%"/>
+    <acme:list-column code="authenticated.task.label.start" path="start" width="15%"/>
     <acme:list-column code="authenticated.task.label.end" path="end" width="20%"/>
     <acme:list-column code="authenticated.task.label.text" path="text" width="20%"/>
-    <acme:list-column code="authenticated.task.label.link" path="link" width="20%"/>     
+    <acme:list-column code="authenticated.task.label.link" path="link" width="20%"/>
+    <acme:list-column code="authenticated.task.label.workLoad" path="workLoad" width="10%"/>   
 
 </acme:list>

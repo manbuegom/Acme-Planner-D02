@@ -17,7 +17,7 @@ manager.task.label.text= Texto:
 manager.task.label.link= Enlace:
 manager.task.label.info= Informacion:
 manager.task.label.visibility= Visible:
-manager.task.label.workload = Carga de trabajo:
+manager.task.label.workLoad = Carga de trabajo:
 
 manager.task.button.create = Crear
 manager.task.button.return = Volver

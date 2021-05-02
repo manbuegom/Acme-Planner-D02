@@ -33,7 +33,7 @@ public class ManagerTaskListService implements AbstractListService<Manager, Task
 		assert entity != null;
 		assert model!= null;
 		
-		request.unbind(entity, model,  "start", "end", "title", "text","link", "visibility");
+		request.unbind(entity, model,  "start", "end", "title", "text","link", "workLoad", "visibility");
 	}
 
 	@Override
@@ -42,9 +42,7 @@ public class ManagerTaskListService implements AbstractListService<Manager, Task
 
 		final Collection<Task> result;
 				
-//		final Date date = Date.valueOf(LocalDate.now());
 		final Integer id = request.getPrincipal().getActiveRoleId();
-		
 		
 		result = this.repository.findMyPrivateTasks(id).stream()
 			.sorted(Comparator.comparing(Task::getWorkLoad)).collect(Collectors.toList());

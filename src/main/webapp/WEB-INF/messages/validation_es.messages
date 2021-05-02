@@ -49,3 +49,4 @@ administrator.word.error.exists = Esa palabra ya existe
 administrator.word.error.notfound = No se ha encontrado esa palabra en la lista
 manager.task.error.task-date = No puede haber una fecha vacía
 manager.task.error.task-dateAfter = La fecha inicio debe ser anterior a la fecha fin
+manager.task.error.task-parse = Debes introducir una fecha

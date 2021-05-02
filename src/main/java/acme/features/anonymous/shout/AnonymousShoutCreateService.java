@@ -91,36 +91,39 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		final int authorLength = request.getModel().getString("author").length();
 		errors.state(request, authorLength >= 5 && authorLength <= 25, "author", "acme.validation.length", 5, 25);
 
-		final List<Word> palabrasSpam = this.repository.spWords();
-		
-		final String pal = entity.getAuthor().trim();
-		final Integer tamA = entity.getAuthor().split(" ").length;
-		
-		final String pal2 = entity.getText().trim();
-		final Integer tamT = entity.getText().split(" ").length;
-		
-		Integer acumA = 0;
-		Integer acumT = 0;
-		
-		for (int i = 0; i < palabrasSpam.size(); i++) {
-			
-			if(pal.contains(palabrasSpam.get(i).getWord())) {
-				acumA++;
-			}
-			if(pal2.contains(palabrasSpam.get(i).getWord())) {
-				acumT++;
-			}
-			
-		}
-		final double spamA = acumA * 100 / tamA;
-		final double spamT = acumT * 100 / tamT;
-			
-		final Double umbral = this.repository.findSpam().getThreshold();
-		final boolean isShoutSpamA = spamA > umbral;
-		final boolean isShoutSpamT= spamT > umbral;
-		errors.state(request, !isShoutSpamA, "author", "anonymous.shout.error.shout-spam");
-		errors.state(request, !isShoutSpamT, "text", "anonymous.shout.error.shout-spam");
+		if (!errors.hasErrors("text") && !errors.hasErrors("author")) {
 
+			final List<Word> palabrasSpam = this.repository.spWords();
+
+			final String pal = entity.getAuthor().trim();
+			final Integer tamA = entity.getAuthor().split(" ").length;
+
+			final String pal2 = entity.getText().trim();
+			final Integer tamT = entity.getText().split(" ").length;
+
+			Integer acumA = 0;
+			Integer acumT = 0;
+
+			for (int i = 0; i < palabrasSpam.size(); i++) {
+
+				if (pal.contains(palabrasSpam.get(i).getWord())) {
+					acumA++;
+				}
+				if (pal2.contains(palabrasSpam.get(i).getWord())) {
+					acumT++;
+				}
+
+			}
+
+			final double spamA = acumA * 100 / tamA;
+			final double spamT = acumT * 100 / tamT;
+
+			final Double umbral = this.repository.findSpam().getThreshold();
+			final boolean isShoutSpamA = spamA > umbral;
+			final boolean isShoutSpamT = spamT > umbral;
+			errors.state(request, !isShoutSpamA, "author", "anonymous.shout.error.shout-spam");
+			errors.state(request, !isShoutSpamT, "text", "anonymous.shout.error.shout-spam");
+		}
 	}
 
 	@Override
