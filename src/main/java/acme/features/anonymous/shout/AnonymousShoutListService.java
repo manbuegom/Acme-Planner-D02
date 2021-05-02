@@ -45,7 +45,7 @@ public class AnonymousShoutListService implements AbstractListService<Anonymous,
 	public Collection<Shout> findMany(final Request<Shout> request) {
 		assert request != null;
 		final Collection<Shout> result = this.repository.findMany(Date.valueOf(LocalDate.now().minusMonths(1)));
-		result.stream().sorted(Comparator.comparing(Shout::getMoment).reversed());
+		result.stream().sorted(Comparator.comparing(Shout::getMoment));
 		return result;
 	}
 	
