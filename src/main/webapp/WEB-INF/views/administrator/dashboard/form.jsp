@@ -29,4 +29,6 @@
 	<acme:form-double code="administrator.dashboard.label.minPeriod" path="minPeriod" />
 	<acme:form-double code="administrator.dashboard.label.maxPeriod" path="maxPeriod" />
 	
+<acme:form-return code="administrator.dashboard.button.return" />
+	
 </acme:form>
