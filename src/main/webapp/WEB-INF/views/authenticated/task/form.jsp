@@ -22,6 +22,7 @@
     <acme:form-textarea code="authenticated.task.label.text" path="text" />
     <acme:form-url code="authenticated.task.label.info" path="link" />
     <acme:form-checkbox code="authenticated.task.label.visibility" path="visibility" /> 
+    <acme:form-double code="authenticated.task.label.workLoad" path="workLoad" /> 
 
     <acme:form-return code="authenticated.task.button.return" />
 </acme:form>

@@ -1,3 +1,4 @@
+
 package acme.entities;
 
 import javax.persistence.Entity;
@@ -14,17 +15,15 @@ public class Word extends DomainEntity {
 	public Word(final String word) {
 		this.word = word;
 	}
-		
+
 	public Word() {
 
 	}
 
-
 	@Override
 	public String toString() {
-		return  this.word;
+		return this.word;
 	}
-
 
 	@Override
 	public int hashCode() {
@@ -52,11 +51,8 @@ public class Word extends DomainEntity {
 	}
 
 
-	private static final long    serialVersionUID    = 1L;
-    
-    private String word;
+	private static final long	serialVersionUID	= 1L;
 
-    
-    
+	private String				word;
 
 }

@@ -29,7 +29,22 @@
 
 		<acme:form-submit code="administrator.spam.label.remove"
 			action="/administrator/spam/spam_remove_word" />
-			
+
+	</jstl:if>
+
+	<jstl:if test="${command == 'spam_remove_word'}">
+
+		<acme:form-textbox code="administrator.spam.label.words"
+			path="newword" />
+		<acme:form-double code="administrator.spam.label.threshold"
+			path="threshold" />
+
+		<acme:form-submit code="administrator.spam.label.update"
+			action="/administrator/spam/update" />
+
+		<acme:form-submit code="administrator.spam.label.remove"
+			action="/administrator/spam/spam_remove_word" />
+
 
 	</jstl:if>
 

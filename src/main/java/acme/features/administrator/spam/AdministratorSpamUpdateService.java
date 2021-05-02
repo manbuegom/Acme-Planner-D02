@@ -99,12 +99,14 @@ public class AdministratorSpamUpdateService implements AbstractUpdateService<Adm
 		assert entity != null;
 
 		final String newWord = request.getModel().getString("newword");
+		final String palabra = newWord.trim();
 		final List<Word> palabras = entity.getWords();
-		if (!newWord.equals("")) {
+		if (!palabra.equals("")) {
 			final Word word = new Word(newWord.trim().toLowerCase());
 			palabras.add(word);
 			entity.setWords(palabras);
 		}
+		
 		this.repository.save(entity);
 	}
 
