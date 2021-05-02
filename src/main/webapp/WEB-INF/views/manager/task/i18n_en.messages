@@ -17,6 +17,7 @@ manager.task.label.text = Text:
 manager.task.label.link = Link:
 manager.task.label.info = Information:
 manager.task.label.visibility= Visibility:
+manager.task.label.workload = Workload:
 
 manager.task.button.create = Create
 manager.task.button.return = Return
