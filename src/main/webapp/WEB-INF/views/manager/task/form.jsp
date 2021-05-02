@@ -22,6 +22,7 @@
     <acme:form-textarea code="manager.task.label.text" path="text" />
     <acme:form-url code="manager.task.label.info" path="link" />
     <acme:form-checkbox code="manager.task.label.visibility" path="visibility" /> 
+    <acme:form-double code="manager.task.label.workload" path="workLoad" />
 
 	<acme:form-submit test="${command == 'create'}" 
 	code="manager.task.button.create" 

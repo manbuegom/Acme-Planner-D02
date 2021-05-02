@@ -101,8 +101,24 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 		assert request != null;
 		assert entity != null;
 
+		final Double actualWorkload = entity.getWorkLoad(); 
+		final Integer minutes = this.getMinutes(actualWorkload);
+		
+		entity.setWorkLoad(this.toHours(minutes));
+		
 		this.repository.save(entity);
+		
+	}
+	
+	public Integer getMinutes(final Double workload) {
+		final Double parteEntera = Math.floor(workload);
+		final Double parteDecimal = workload - parteEntera;
 
+		return (int) (parteEntera * 60 + parteDecimal * 100);
+	}
+
+	public Double toHours(final Integer minutes) {
+		return minutes / 60 + (double) (minutes % 60) / 100;
 	}
 
 }
