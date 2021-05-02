@@ -20,6 +20,6 @@ public interface AnonymousTaskRepository extends AbstractRepository {
     
     @Query("select t from Task t where t.visibility = true and t.end > ?1")
     Collection<Task> findPublicTasks(Date date);
-
+    
 }
 

@@ -2,12 +2,14 @@ package acme.features.manager.task;
 
 import java.sql.Date;
 import java.util.Collection;
+import java.util.List;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import acme.entities.Spam;
 import acme.entities.Task;
+import acme.entities.Word;
 import acme.entities.roles.Manager;
 import acme.framework.repositories.AbstractRepository;
 
@@ -36,6 +38,10 @@ public interface ManagerTaskRepository extends AbstractRepository {
     
     @Query("select m from Manager m where m.id = ?1")
     Manager findById(int managerId);
+    
+	@Query("select w from Word w")
+	List<Word> spWords();
+	
     
     
 }

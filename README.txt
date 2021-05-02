@@ -11,3 +11,7 @@
 This is the Acme Planner project. This project is for deliverable #D02. 
 
 We are going to produce this version of Starter Project following the requirements given by.
+
+This project implements the requirements for the C and B levels.
+
+GitHub´s link -> https://github.com/manbuegom/Acme-Planner-D02

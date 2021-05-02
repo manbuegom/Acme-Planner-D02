@@ -2,11 +2,14 @@
 package acme.features.anonymous.shout;
 
 import java.util.Date;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.Shout;
+import acme.entities.Word;
+import acme.features.administrator.spam.AdministratorSpamRepository;
 import acme.framework.components.Errors;
 import acme.framework.components.HttpMethod;
 import acme.framework.components.Model;
@@ -18,7 +21,10 @@ import acme.framework.services.AbstractCreateService;
 public class AnonymousShoutCreateService implements AbstractCreateService<Anonymous, Shout> {
 
 	@Autowired
-	AnonymousShoutRepository repository;
+	AnonymousShoutRepository	repository;
+
+	@Autowired
+	AdministratorSpamRepository	spRep;
 
 
 	@Override
@@ -85,12 +91,35 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		final int authorLength = request.getModel().getString("author").length();
 		errors.state(request, authorLength >= 5 && authorLength <= 25, "author", "acme.validation.length", 5, 25);
 
-//		final Spam s = this.repository.findSpam();
+		final List<Word> palabrasSpam = this.repository.spWords();
 		
-//		final int spamAuthor = (int) (Arrays.asList(sp).stream().filter(x -> entity.getAuthor().toLowerCase().contains(x.toLowerCase().trim())).count() * 100 / sp.length);
-//
-//		final boolean isShoutSpam = (spamText  + spamAuthor) < s.getThreshold();
-//		errors.state(request, isShoutSpam, "text", "anonymous.shout.error.shout-spam");
+		final String pal = entity.getAuthor().trim();
+		final Integer tamA = entity.getAuthor().split(" ").length;
+		
+		final String pal2 = entity.getText().trim();
+		final Integer tamT = entity.getText().split(" ").length;
+		
+		Integer acumA = 0;
+		Integer acumT = 0;
+		
+		for (int i = 0; i < palabrasSpam.size(); i++) {
+			
+			if(pal.contains(palabrasSpam.get(i).getWord())) {
+				acumA++;
+			}
+			if(pal2.contains(palabrasSpam.get(i).getWord())) {
+				acumT++;
+			}
+			
+		}
+		final double spamA = acumA * 100 / tamA;
+		final double spamT = acumT * 100 / tamT;
+			
+		final Double umbral = this.repository.findSpam().getThreshold();
+		final boolean isShoutSpamA = spamA > umbral;
+		final boolean isShoutSpamT= spamT > umbral;
+		errors.state(request, !isShoutSpamA, "author", "anonymous.shout.error.shout-spam");
+		errors.state(request, !isShoutSpamT, "text", "anonymous.shout.error.shout-spam");
 
 	}
 
