@@ -2,6 +2,7 @@ package acme.features.manager.task;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.Assert;
 
 import acme.entities.Task;
 import acme.entities.roles.Manager;
@@ -41,6 +42,9 @@ public class ManagerTaskShowService implements AbstractShowService<Manager, Task
 		Integer id;
 		id = request.getModel().getInteger("id");
 		result = this.repository.findOnebyId(id);
+		final Integer idrol= request.getPrincipal().getActiveRoleId();
+		Assert.state(!this.repository.findMyNullTasks().contains(result),"default.error.not-authorised" );
+		Assert.state(result.getManager().getId() == idrol  , "default.error.not-authorised");
 
 		return result;
 	}
