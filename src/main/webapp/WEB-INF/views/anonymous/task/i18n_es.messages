@@ -16,7 +16,7 @@ anonymous.task.label.title = Titulo:
 anonymous.task.label.text= Texto:
 anonymous.task.label.link= Enlace:
 anonymous.task.label.info= Informacion:
-anonymous.task.label.visibility= Visible:
+anonymous.task.label.visibility= Publica
 anonymous.task.label.workLoad= Carga de trabajo:
 
 anonymous.task.button.return = Volver

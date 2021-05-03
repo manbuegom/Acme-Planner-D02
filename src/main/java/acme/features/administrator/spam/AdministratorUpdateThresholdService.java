@@ -1,6 +1,6 @@
+
 package acme.features.administrator.spam;
 
-import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.Spam;
-import acme.entities.Word;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -16,7 +15,7 @@ import acme.framework.entities.Administrator;
 import acme.framework.services.AbstractUpdateService;
 
 @Service
-public class AdministratorSpamUpdateService implements AbstractUpdateService<Administrator, Spam> {
+public class AdministratorUpdateThresholdService implements AbstractUpdateService<Administrator, Spam> {
 
 	@Autowired
 	protected AdministratorSpamRepository repository;
@@ -43,17 +42,7 @@ public class AdministratorSpamUpdateService implements AbstractUpdateService<Adm
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-		
-		String palabras = "";
-		final Collection<Word> words = entity.getWords();
 
-		for (final Word word : words) {
-			palabras += word.getWord() + ", ";
-		}
-
-		model.setAttribute("palabras", palabras);
-		model.setAttribute("newword", "");
-		
 		request.unbind(entity, model, "threshold");
 
 	}
@@ -72,34 +61,12 @@ public class AdministratorSpamUpdateService implements AbstractUpdateService<Adm
 		assert entity != null;
 		assert errors != null;
 
-		final String palabra = request.getModel().getString("newword");
-		final List<Word> palabras = entity.getWords();
-
-		if (palabra.trim().equals("")) {
-			errors.state(request, false, "newword", "administrator.word.error.empty");
-		} else {
-			for (final Word pal : palabras) {
-				if (pal.getWord().equals(palabra)) {
-					errors.state(request, false, "newword", "administrator.word.error.exists");
-					break;
-				}
-			}
-		}
 	}
 
 	@Override
 	public void update(final Request<Spam> request, final Spam entity) {
 		assert request != null;
 		assert entity != null;
-
-		final String newWord = request.getModel().getString("newword");
-		final String palabra = newWord.trim();
-		final List<Word> palabras = entity.getWords();
-		if (!palabra.equals("")) {
-			final Word word = new Word(newWord.trim().toLowerCase());
-			palabras.add(word);
-			entity.setWords(palabras);
-		}
 
 		this.repository.save(entity);
 	}

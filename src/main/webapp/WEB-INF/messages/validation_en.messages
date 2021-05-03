@@ -47,6 +47,7 @@ anonymous.shout.error.shout-spam = Your shout contains spam words
 manager.task.error.task-spam = Your task contains spam words
 administrator.word.error.exists = Your word already exists
 administrator.word.error.notfound = We couldn't find that word in the list
+administrator.word.error.empty = The field must not be empty
 manager.task.error.task-date = Date can't be empty
 manager.task.error.task-dateAfter = End date must be after Start date
 manager.task.error.task-parse = You must enter a valid date

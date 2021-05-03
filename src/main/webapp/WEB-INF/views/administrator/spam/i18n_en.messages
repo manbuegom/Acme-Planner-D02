@@ -13,6 +13,7 @@ administrator.spam.label.threshold = Spam's threshold:
 
 administrator.spam.label.update = Add word
 administrator.spam.label.remove = Remove word
+administrator.spam.label.update.threshold = Save
 administrator.spam.button.return = Return
 
 administrator.configuration.error.duplicated

@@ -13,4 +13,5 @@ administrator.spam.label.threshold = Umbral de Spam:
 
 administrator.spam.label.update = Añadir palabra
 administrator.spam.label.remove = Borrar palabra
+administrator.spam.label.update.threshold = Guardar
 administrator.spam.button.return = Volver

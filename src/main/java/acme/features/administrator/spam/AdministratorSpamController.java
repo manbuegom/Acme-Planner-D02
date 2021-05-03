@@ -16,22 +16,22 @@ import acme.framework.entities.Administrator;
 @Controller
 @RequestMapping("/administrator/spam/")
 public class AdministratorSpamController extends AbstractController<Administrator, Spam> {
-
-	@Autowired
-	AdministratorSpamShowService showService;
 	
 	@Autowired
 	AdministratorSpamUpdateService updateService;
 	
 	@Autowired
 	AdministratorUpdateRemoveService updateRemoveService;
+	
+	@Autowired
+	AdministratorUpdateThresholdService updateThresholdService;
 
 
 	@PostConstruct
 	private void initialise() {
-		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 		super.addBasicCommand(BasicCommand.UPDATE, this.updateService);
 		super.addCustomCommand(CustomCommand.SPAM_REMOVE_WORD, BasicCommand.UPDATE, this.updateRemoveService);
+		super.addCustomCommand(CustomCommand.UPDATE_THRESHOLD, BasicCommand.UPDATE, this.updateThresholdService);
 
 		
 	}
