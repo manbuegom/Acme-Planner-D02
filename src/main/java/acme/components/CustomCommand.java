@@ -16,5 +16,5 @@ import acme.framework.components.Command;
 
 public enum CustomCommand implements Command {
 
-	SPAM_REMOVE_WORD;
+	SPAM_REMOVE_WORD, UPDATE_THRESHOLD;
 }

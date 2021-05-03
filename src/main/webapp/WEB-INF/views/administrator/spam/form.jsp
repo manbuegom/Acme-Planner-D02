@@ -17,12 +17,15 @@
 
 
 <acme:form>
+
+
 	<jstl:if test="${command == 'update'}">
+
+		<acme:form-textarea code="administrator.spam.label.words"
+			path="palabras" readonly="true" />
 
 		<acme:form-textbox code="administrator.spam.label.words"
 			path="newword" />
-		<acme:form-double code="administrator.spam.label.threshold"
-			path="threshold" />
 
 		<acme:form-submit code="administrator.spam.label.update"
 			action="/administrator/spam/update" />
@@ -33,11 +36,11 @@
 	</jstl:if>
 
 	<jstl:if test="${command == 'spam_remove_word'}">
+		<acme:form-textarea code="administrator.spam.label.words"
+			path="palabras" readonly="true" />
 
 		<acme:form-textbox code="administrator.spam.label.words"
 			path="newword" />
-		<acme:form-double code="administrator.spam.label.threshold"
-			path="threshold" />
 
 		<acme:form-submit code="administrator.spam.label.update"
 			action="/administrator/spam/update" />
@@ -45,17 +48,20 @@
 		<acme:form-submit code="administrator.spam.label.remove"
 			action="/administrator/spam/spam_remove_word" />
 
-
 	</jstl:if>
 
-	<jstl:if test="${command == 'show'}">
+	<jstl:if test="${command == 'update_threshold'}">
 
-		<acme:form-textarea code="administrator.spam.label.words"
-			path="palabras" readonly="true" />
 		<acme:form-double code="administrator.spam.label.threshold"
-			path="threshold" readonly="true" />
+			path="threshold" />
+
+		<acme:form-submit code="administrator.spam.label.update.threshold"
+			action="/administrator/spam/update_threshold" />
+
 
 	</jstl:if>
+
+
 
 	<acme:form-return code="administrator.spam.button.return" />
 
