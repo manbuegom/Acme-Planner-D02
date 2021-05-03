@@ -47,6 +47,7 @@ anonymous.shout.error.shout-spam = Tu shout contiene palabras consideradas Spam
 manager.task.error.task-spam = Tu task contiene palabras consideradas Spam
 administrator.word.error.exists = Esa palabra ya existe
 administrator.word.error.notfound = No se ha encontrado esa palabra en la lista
+administrator.word.error.empty = El campo no puede estar vacío
 manager.task.error.task-date = No puede haber una fecha vacía
 manager.task.error.task-dateAfter = La fecha inicio debe ser anterior a la fecha fin
 manager.task.error.task-parse = Debes introducir una fecha

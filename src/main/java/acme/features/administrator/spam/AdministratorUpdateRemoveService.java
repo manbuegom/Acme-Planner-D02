@@ -1,5 +1,6 @@
 package acme.features.administrator.spam;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -15,8 +16,7 @@ import acme.framework.entities.Administrator;
 import acme.framework.services.AbstractUpdateService;
 
 @Service
-public class AdministratorUpdateRemoveService  implements AbstractUpdateService<Administrator, Spam> {
-
+public class AdministratorUpdateRemoveService implements AbstractUpdateService<Administrator, Spam> {
 
 	@Autowired
 	protected AdministratorSpamRepository repository;
@@ -43,7 +43,15 @@ public class AdministratorUpdateRemoveService  implements AbstractUpdateService<
 		assert request != null;
 		assert entity != null;
 		assert model != null;
+		
+		String palabras = "";
+		final Collection<Word> words = entity.getWords();
 
+		for (final Word word : words) {
+			palabras += word.getWord() + ", ";
+		}
+
+		model.setAttribute("palabras", palabras);
 		model.setAttribute("newword", "");
 		request.unbind(entity, model, "threshold");
 
@@ -62,19 +70,21 @@ public class AdministratorUpdateRemoveService  implements AbstractUpdateService<
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-		
-		final String palabra = request.getModel().getString("newword");
-		
-		boolean exists = false;
-		final List<Word> palabras = entity.getWords();
 
-		for (final Word pal : palabras) {
-			if (pal.getWord().equals(palabra)) {
-				exists = true;
-				break;
+		final String palabra = request.getModel().getString("newword");
+		final List<Word> palabras = entity.getWords();
+		boolean exists = false;
+		if (palabra.trim().equals("")) {
+			errors.state(request, false, "newword", "administrator.word.error.empty");
+		} else {
+			for (final Word pal : palabras) {
+				if (pal.getWord().equals(palabra)) {
+					exists= true;
+					break;
+				}
 			}
+			errors.state(request, exists, "newword", "administrator.word.error.notfound");
 		}
-		errors.state(request, exists, "newword", "administrator.word.error.notfound");
 
 	}
 
@@ -87,13 +97,13 @@ public class AdministratorUpdateRemoveService  implements AbstractUpdateService<
 		final List<Word> palabras = entity.getWords();
 
 		if (!newWord.equals("")) {
-				for(final Word pal: palabras) {
-					if(pal.getWord().equals(newWord)) {
-						palabras.remove(pal);
-						break;
-					}
+			for (final Word pal : palabras) {
+				if (pal.getWord().equals(newWord)) {
+					palabras.remove(pal);
+					break;
 				}
-				entity.setWords(palabras);
+			}
+			entity.setWords(palabras);
 		}
 		this.repository.save(entity);
 	}
