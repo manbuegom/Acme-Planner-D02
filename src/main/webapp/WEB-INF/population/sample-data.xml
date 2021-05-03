@@ -15,57 +15,6 @@
 	<import
 		resource="classpath:/WEB-INF/population/conversion-service.xml" />
 
-	<bean id="spam01" class="acme.entities.Spam">
-		<property name="words">
-			<list>
-				<bean class="acme.entities.Word">
-					<property name="word" value="sex" />
-				</bean>
-
-				<bean class="acme.entities.Word">
-					<property name="word" value="sexo" />
-				</bean>
-
-				<bean class="acme.entities.Word">
-					<property name="word" value="hard core" />
-				</bean>
-
-				<bean class="acme.entities.Word">
-					<property name="word" value="duro" />
-				</bean>
-
-				<bean class="acme.entities.Word">
-					<property name="word" value="viagra" />
-				</bean>
-
-				<bean class="acme.entities.Word">
-					<property name="word" value="cialis" />
-				</bean>
-
-				<bean class="acme.entities.Word">
-					<property name="word" value="nigeria" />
-				</bean>
-
-				<bean class="acme.entities.Word">
-					<property name="word" value="you've won" />
-				</bean>
-
-				<bean class="acme.entities.Word">
-					<property name="word" value="has ganado" />
-				</bean>
-
-				<bean class="acme.entities.Word">
-					<property name="word" value="million dollar" />
-				</bean>
-
-				<bean class="acme.entities.Word">
-					<property name="word" value="millón de dólares" />
-				</bean>
-			</list>
-		</property>
-		<property name="threshold" value="10.0" />
-	</bean>
-
 	<bean id="shout01" class="acme.entities.Shout">
 		<property name="moment" value="2021/02/03 19:39" />
 		<property name="author" value="John Doe" />
@@ -77,8 +26,8 @@
 
 	<bean id="shout02" class="acme.entities.Shout">
 		<property name="moment" value="2020/11/03 15:09" />
-		<property name="author" value="JavierR" />
-		<property name="text" value="Prueba de Javier" />
+		<property name="author" value="Javier Raul Santos" />
+		<property name="text" value="Estoy confuso" />
 		<property name="info">
 			<null />
 		</property>
@@ -87,15 +36,15 @@
 	<bean id="shout03" class="acme.entities.Shout">
 		<property name="moment" value="2020/04/26 12:34" />
 		<property name="author" value="Fernando" />
-		<property name="text" value="Prueba de fernando" />
-		<property name="info" value="https://ferki.com" />
+		<property name="text" value="¿Alguien sabe algo?" />
+		<property name="info" value="https://google.com" />
 	</bean>
 
 	<bean id="shout04" class="acme.entities.Shout">
 		<property name="moment" value="2021/04/19 23:34" />
 		<property name="author" value="Manuel" />
-		<property name="text" value="Shout de Manuel." />
-		<property name="info" value="https://manuelb.com" />
+		<property name="text" value="Voy al cinel." />
+		<property name="info" value="https://youtube.com" />
 	</bean>
 
 	<bean id="shout05" class="acme.entities.Shout">
@@ -174,7 +123,7 @@
 	<bean id="task03" class="acme.entities.Task">
 		<property name="start" value="2022/04/26 12:30" />
 		<property name="end" value="2022/04/26 13:30" />
-		<property name="title" value="Primera" />
+		<property name="title" value="Tarea para el Viernes" />
 		<property name="text" value="Revisar los documentos" />
 		<property name="link" value="https://ferki.com" />
 		<property name="visibility" value="true" />
@@ -184,7 +133,7 @@
 	<bean id="task04" class="acme.entities.Task">
 		<property name="start" value="2022/07/26 12:30" />
 		<property name="end" value="2022/07/26 14:30" />
-		<property name="title" value="Segunda" />
+		<property name="title" value="Tarea de Marta" />
 		<property name="text" value="Revisar los documentos" />
 		<property name="link" value="https://ferki.com" />
 		<property name="visibility" value="true" />
@@ -194,27 +143,27 @@
 	<bean id="task05" class="acme.entities.Task">
 		<property name="start" value="2022/04/26 13:30" />
 		<property name="end" value="2022/04/26 14:30" />
-		<property name="title" value="Tercera" />
+		<property name="title" value="Desayuno" />
 		<property name="text" value="Comprar pan" />
 		<property name="link" value="https://mercadona.com" />
 		<property name="visibility" value="true" />
-		<property name="workLoad" value="1.2" />
+		<property name="workLoad" value="0.2" />
 	</bean>
 
 	<bean id="task06" class="acme.entities.Task">
 		<property name="start" value="2022/06/12 21:30" />
 		<property name="end" value="2022/06/12 23:30" />
-		<property name="title" value="Cuarta" />
+		<property name="title" value="Tarea de Pedro" />
 		<property name="text" value="Sacar al perro" />
 		<property name="link" value="https://petclinic.com" />
 		<property name="visibility" value="true" />
-		<property name="workLoad" value="2.4" />
+		<property name="workLoad" value="2.1" />
 	</bean>
 
 	<bean id="task07" class="acme.entities.Task">
 		<property name="start" value="2022/06/12 20:30" />
 		<property name="end" value="2022/06/12 22:00" />
-		<property name="title" value="Quinta" />
+		<property name="title" value="Tarea de Pablo" />
 		<property name="text" value="Sacar al perro" />
 		<property name="link" value="https://petclinic.com" />
 		<property name="visibility" value="true" />
@@ -224,62 +173,63 @@
 	<bean id="task08" class="acme.entities.Task">
 		<property name="start" value="2022/06/05 16:45" />
 		<property name="end" value="2022/06/05 18:20" />
-		<property name="title" value="Sexta" />
+		<property name="title" value="Tarea de Juan" />
 		<property name="text" value="Limpiar el coche" />
-		<property name="link" value="https://comparmostucoche.es" />
+		<property name="link" value="https://compramostucoche.es" />
 		<property name="visibility" value="true" />
 		<property name="workLoad" value="3.5" />
 	</bean>
 
 
 	<bean id="task09" class="acme.entities.Task">
-		<property name="start" value="2020/04/25 12:30" />
+		<property name="start" value="2020/04/22 12:30" />
 		<property name="end" value="2020/04/25 14:30" />
-		<property name="title" value="terminada1" />
+		<property name="title" value="Tarea PSGII" />
 		<property name="text" value="Revisar los documentos" />
-		<property name="link" value="https://ferki.com" />
+		<property name="link" value="https://burguerm.com" />
 		<property name="visibility" value="true" />
 		<property name="workLoad" value="2.0" />
 	</bean>
 
 	<bean id="task010" class="acme.entities.Task">
 		<property name="start" value="2020/04/25 12:30" />
-		<property name="end" value="2020/04/25 14:30" />
-		<property name="title" value="terminada2" />
-		<property name="text" value="Revisar los documentos" />
-		<property name="link" value="https://ferki.com" />
+		<property name="end" value="2020/04/28 14:30" />
+		<property name="title" value="Pruebas de controlador" />
+		<property name="text" value="Hacer bien las pruebas" />
+		<property name="link" value="https://goiko.com" />
 		<property name="visibility" value="true" />
-		<property name="workLoad" value="2.0" />
+		<property name="workLoad" value="1.2" />
 	</bean>
 
 	<bean id="task011" class="acme.entities.Task">
-		<property name="start" value="2020/04/25 12:30" />
-		<property name="end" value="2020/04/25 14:30" />
-		<property name="title" value="terminada3" />
-		<property name="text" value="Revisar los documentos" />
-		<property name="link" value="https://ferki.com" />
+		<property name="start" value="2020/04/28 12:30" />
+		<property name="end" value="2020/04/28 14:30" />
+		<property name="title" value="Tarea de DPII" />
+		<property name="text" value="Revisar el workplan" />
+		<property name="link" value="https://leagueoflegends.com" />
 		<property name="visibility" value="true" />
-		<property name="workLoad" value="2.0" />
+		<property name="workLoad" value="3.5" />
 	</bean>
 
 	<bean id="task012" class="acme.entities.Task">
-		<property name="start" value="2020/04/25 12:30" />
-		<property name="end" value="2020/04/25 14:30" />
-		<property name="title" value="terminada4" />
-		<property name="text" value="Revisar los documentos" />
-		<property name="link" value="https://ferki.com" />
+		<property name="start" value="2020/03/22 12:30" />
+		<property name="end" value="2020/03/24 14:30" />
+		<property name="title" value="Tarea de MVG" />
+		<property name="text" value="Revisar los ejercicios" />
+		<property name="link" value="https://discord.com" />
 		<property name="visibility" value="true" />
-		<property name="workLoad" value="2.0" />
+		<property name="workLoad" value="4.0" />
 	</bean>
 
 	<bean id="task013" class="acme.entities.Task">
-		<property name="start" value="2020/04/25 12:30" />
-		<property name="end" value="2020/04/25 14:30" />
-		<property name="title" value="terminada5" />
-		<property name="text" value="Revisar los documentos" />
-		<property name="link" value="https://ferki.com" />
+		<property name="start" value="2020/03/25 12:30" />
+		<property name="end" value="2020/03/28 14:30" />
+		<property name="title" value="Pedir la receta de la boloñesa" />
+		<property name="text"
+			value="Llama a Ana para que te pase la receta de la boloñesa de su abuela" />
+		<property name="link" value="https://receta.com" />
 		<property name="visibility" value="true" />
-		<property name="workLoad" value="2.0" />
+		<property name="workLoad" value="3.5" />
 	</bean>
 
 	<bean name="managerUserAccount01"
@@ -289,9 +239,9 @@
 		<property name="enabled" value="true" />
 		<property name="identity">
 			<bean class="acme.datatypes.UserIdentity">
-				<property name="name" value="manager" />
-				<property name="surname" value="manager" />
-				<property name="email" value="manager@acme.com" />
+				<property name="name" value="Antonio" />
+				<property name="surname" value="López" />
+				<property name="email" value="alopez@acme.com" />
 			</bean>
 		</property>
 		<property name="roles">
@@ -312,48 +262,106 @@
 		class="acme.framework.entities.Authenticated">
 		<property name="userAccount" ref="managerUserAccount01" />
 	</bean>
+	
+		<bean name="managerUserAccount02"
+		class="acme.framework.entities.UserAccount">
+		<property name="username" value="manager02" />
+		<property name="password" value="manager02" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Pedro" />
+				<property name="surname" value="Picapiedra" />
+				<property name="email" value="pedrop@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="manager02" />
+				<ref bean="managerAuthenticated02" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="manager02" class="acme.entities.roles.Manager">
+		<property name="userAccount" ref="managerUserAccount02" />
+		<property name="company" value="managerComp2" />
+		<property name="sector" value="managerSector2" />
+	</bean>
+
+	<bean name="managerAuthenticated02"
+		class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="managerUserAccount02" />
+	</bean>
 
 	<bean id="task14" class="acme.entities.Task">
 		<property name="start" value="2022/04/26 12:30" />
 		<property name="end" value="2022/04/26 14:30" />
-		<property name="title" value="Prueba manager" />
-		<property name="text" value="Revisar los documentos" />
-		<property name="link" value="https://ferki.com" />
+		<property name="title" value="Comer con el jefe" />
+		<property name="text"
+			value="Reservar en el restaurante de las langostas y llamar a casa para recordar que no comes allí" />
+		<property name="link" value="https://restaurante.com" />
 		<property name="visibility" value="false" />
-		<property name="workLoad" value="2.2" />
+		<property name="workLoad" value="4.7" />
 		<property name="manager" ref="manager01" />
 	</bean>
 
 	<bean id="task15" class="acme.entities.Task">
 		<property name="start" value="2022/06/26 12:30" />
 		<property name="end" value="2022/07/26 14:30" />
-		<property name="title" value="Prueba manager2" />
-		<property name="text" value="Revisar el proyecto" />
-		<property name="link" value="https://ferki.com" />
+		<property name="title" value="Enviar proyecto" />
+		<property name="text"
+			value="Enviar el proyecto antes del viernes y avisar por correo a los integrantes" />
+		<property name="link" value="https://proyecto.com" />
 		<property name="visibility" value="false" />
-		<property name="workLoad" value="2.2" />
+		<property name="workLoad" value="3.8" />
 		<property name="manager" ref="manager01" />
 	</bean>
 
 
 	<bean id="task16" class="acme.entities.Task">
-		<property name="start" value="2020/04/25 12:30" />
-		<property name="end" value="2020/04/25 14:30" />
-		<property name="title" value="terminada6" />
-		<property name="text" value="Revisar los documentos" />
-		<property name="link" value="https://ferki.com" />
+		<property name="start" value="2020/01/23 12:30" />
+		<property name="end" value="2020/05/30 14:30" />
+		<property name="title" value="Pedir pizza" />
+		<property name="text"
+			value="Pedir la pizza para el cumpleaños de Raquel" />
+		<property name="link" value="https://cumpleaños.com" />
 		<property name="visibility" value="true" />
-		<property name="workLoad" value="2.0" />
+		<property name="workLoad" value="1.8" />
 	</bean>
 
 	<bean id="task17" class="acme.entities.Task">
-		<property name="start" value="2020/04/25 12:30" />
-		<property name="end" value="2020/04/25 14:30" />
-		<property name="title" value="terminada7" />
-		<property name="text" value="Revisar los documentos" />
-		<property name="link" value="https://ferki.com" />
+		<property name="start" value="2020/02/25 12:30" />
+		<property name="end" value="2020/03/15 14:30" />
+		<property name="title" value="Hacer la compra" />
+		<property name="text"
+			value="Comprar todos los ingredientes de la tarta" />
+		<property name="link" value="https://tarta.com" />
 		<property name="visibility" value="true" />
-		<property name="workLoad" value="2.0" />
+		<property name="workLoad" value="3.4" />
 	</bean>
 
+	<bean id="task18" class="acme.entities.Task">
+		<property name="start" value="2022/05/21 12:30" />
+		<property name="end" value="2022/05/22 14:30" />
+		<property name="title" value="Comer con mi prima Juana" />
+		<property name="text"
+			value="Vamo a pedir en la Tagliatella" />
+		<property name="link" value="https://restauranteitaliano.com" />
+		<property name="visibility" value="false" />
+		<property name="workLoad" value="2.7" />
+		<property name="manager" ref="manager02" />
+	</bean>
+	
+	<bean id="task19" class="acme.entities.Task">
+		<property name="start" value="2022/06/26 12:30" />
+		<property name="end" value="2022/06/28 14:30" />
+		<property name="title" value="Pedirme unas zapatillas nike guapisimas" />
+		<property name="text"
+			value="Voy a pedir una ofertita en reina mercedes de dos bocatas más unas nike guapisimas" />
+		<property name="link" value="https://nikeybocatas.com" />
+		<property name="visibility" value="false" />
+		<property name="workLoad" value="3.7" />
+		<property name="manager" ref="manager02" />
+	</bean>
 </beans>
