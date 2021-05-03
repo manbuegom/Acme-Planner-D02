@@ -10,14 +10,13 @@
 
 # master.banner.welcome #######################################################
 
-master.banner.background = #FFE97F 
+master.banner.background = #FFE97F  
 
 # master.welcome ##############################################################
 
 master.welcome.title = Welcome!
 master.welcome.text = \
-	Welcome to Starter Project! Never before has it bee easier to get your \
-	project up and running!
+	Welcome to Acme-Planner! Project for deliverable #D02
 
 # master.menu #################################################################
 
@@ -26,19 +25,45 @@ master.menu.sign-up = Sign up
 master.menu.sign-in = Sign in
 master.menu.sign-out = Sign out
 
+# master.menu.shout #######################################################
+
+
+master.menu.shout = Create shout
+
+# master.menu.task #######################################################
+
+master.menu.task = Create task 
+master.menu.task.list = List tasks
+
+# master.menu.authenticated #######################################################
+master.menu.authenticated = Authenticated
+master.menu.authenticated.list.tasks = List tasks
+
 # master.menu.anonymous #######################################################
 
 master.menu.anonymous = Anonymous
-master.menu.anonymous.favourite-link = Favourite link
+master.menu.anonymous.shout = Create shout
+master.menu.anonymous.list-shouts = List shouts
+master.menu.anonymous.task.list = List tasks
+master.menu.anonymous.workplan.list = List workplans
 
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrator
 master.menu.administrator.dashboard = Dashboard
+master.menu.administrator.spam = Spam management
+master.menu.administrator.spam.show = Show spam parameters
+master.menu.administrator.spam.update = Update spam parameters
 master.menu.administrator.user-accounts = User accounts
 master.menu.administrator.populate-initial = Populate DB (initial)
 master.menu.administrator.populate-sample = Populate DB (samples)
 master.menu.administrator.shutdown = Shut down
+
+# master.menu.manager ########################################################
+
+master.menu.manager = Manager
+master.menu.manager.create.tasks = Create Task
+master.menu.manager.list.tasks = List Tasks
 
 # master.menu.provider ########################################################
 
@@ -73,13 +98,11 @@ master.footer.label.spanish = Spanish
 
 # master.company ##############################################################
 
-master.company.title = The company
+master.company.title = G3-69 DPII
 master.company.text = \
-	Starter Project, Inc. is a fictitious fictitious company that provides a \
-	starter project for the students of the Design and Testing subject of the \
-	Software Engineering Curriculum of the University of Sevilla.
-master.company.name = Starter Project, Inc.
-master.company.address = Number Street, City, State, Country
+	Acme Planner is a project developed for a DPII's deliverable . #D02
+master.company.name = Acme Planner, Inc.
+master.company.address = Av. Reina Mercedes, Sevilla.
 master.company.phone = +000 123 456
 master.company.email = contact@acme.com
 

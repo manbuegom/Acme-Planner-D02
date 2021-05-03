@@ -10,13 +10,13 @@
 
 # master.banner.welcome #######################################################
 
-master.banner.background = #FFE97F 
+master.banner.background = #FFE97F  
 
 ﻿# master.welcome ##############################################################
 
 master.welcome.title = ¡Bienvenidos!
 master.welcome.text = \
-	Bienvenidos a Acme Stater!  Nunca antes ha sido tan sencillo desarrollar un \
+	Bienvenidos a Acme Planner!  Nunca antes ha sido tan sencillo desarrollar un \
 	proyecto y hacerlo funcionar.
 
 # master.menu #################################################################
@@ -26,19 +26,42 @@ master.menu.sign-up = Registrarse
 master.menu.sign-in = Entrar
 master.menu.sign-out = Salir
 
+# master.menu.shout #######################################################
+
+master.menu.shout = Crear shout
+
+# master.menu.task #######################################################
+
+master.menu.task = Crear task
+master.menu.task.list = Ver tasks
+
+# master.menu.authenticated #######################################################
+master.menu.authenticated = Autenticado
+master.menu.authenticated.list.tasks = Lista de tasks
 # master.menu.anonymous #######################################################
 
 master.menu.anonymous = Anónimo
-master.menu.anonymous.favourite-link = Enlace favorito
+master.menu.anonymous.shout = Crear shouts
+master.menu.anonymous.list-shouts = Lista de shouts
+master.menu.anonymous.task.list = Lista de tasks
+master.menu.anonymous.workplan.list = Lista de workplans
 
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrador
 master.menu.administrator.dashboard = Panel de indicadores
+master.menu.administrator.spam.show = Mostrar parámetros spam
+master.menu.administrator.spam.update = Actualizar parámetros spam
 master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.populate-initial = Poblar BD (inicial)
 master.menu.administrator.populate-sample = Poblar BD (ejemplos)
 master.menu.administrator.shutdown = Parar el sistema
+
+# master.menu.manager ########################################################
+
+master.menu.manager = Manager
+master.menu.manager.create.tasks = Crear Task
+master.menu.manager.list.tasks = Lista de Tasks
 
 # master.menu.provider ########################################################
 
@@ -73,13 +96,11 @@ master.footer.label.spanish = Español
 
 # master.company ##############################################################
 
-master.company.title = La compañía
+master.company.title = G3-69 DPII
 master.company.text = \
-	Starter Project, Inc. es una compañía fictícia que proporciona un proyecto \
-	plantilla para los estudiantes de la asignatura Diseño y Pruebas, en el Grado \
-	en Ingeniería del Software de la Universidad de Sevilla.
-master.company.name = Starter Project, Inc.
-master.company.address = Calle, número, Ciudad, Estado, País
+	Acme Planner es un proyecto desarrollado para un entregable de DP2II #D02
+master.company.name = Acme Planner, Inc.
+master.company.address = Av. Reina Mercedes, Sevilla.
 master.company.phone = +000 123 456
 master.company.email = contact@acme.com
 

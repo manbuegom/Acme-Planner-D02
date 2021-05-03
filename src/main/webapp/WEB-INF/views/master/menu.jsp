@@ -18,9 +18,27 @@
 
 <acme:menu-bar code="master.menu.home">
 	<acme:menu-left>
-		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
-			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="http://www.example.com/"/>
+		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()"> 
+			<acme:menu-suboption code="master.menu.anonymous.shout" action="/anonymous/shout/create"/>
+			<acme:menu-suboption code="master.menu.anonymous.list-shouts" action="/anonymous/shout/list"/>
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.anonymous.task.list" action="/anonymous/task/list"/>
+			<acme:menu-separator/>
 		</acme:menu-option>
+		
+
+		<acme:menu-option code="master.menu.manager"
+			access="hasRole('Manager')">
+			<acme:menu-suboption code="master.menu.manager.create.tasks"
+				action="/manager/task/create" />
+			<acme:menu-suboption code="master.menu.manager.list.tasks"
+				action="/manager/task/list" />
+		</acme:menu-option>
+
+
+		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
+			<acme:menu-suboption code="master.menu.authenticated.list.tasks"  action="/authenticated/task/list"/>
+		</acme:menu-option>		
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
 			<acme:menu-suboption code="master.menu.administrator.user-accounts" action="/administrator/user-account/list"/>
@@ -28,7 +46,15 @@
 			<acme:menu-suboption code="master.menu.administrator.populate-initial" action="/master/populate-initial"/>
 			<acme:menu-suboption code="master.menu.administrator.populate-sample" action="/master/populate-sample"/>			
 			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.administrator.spam.update"
+                action="/administrator/spam/update" />
+            <acme:menu-suboption code="master.menu.administrator.spam.show"
+                action="/administrator/spam/show" />
+            <acme:menu-separator />
+			<acme:menu-suboption code="master.menu.administrator.dashboard" action="/administrator/dashboard/show"/>
+			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.shutdown" action="/master/shutdown"/>
+            <acme:menu-separator/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">
