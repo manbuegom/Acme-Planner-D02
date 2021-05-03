@@ -1,7 +1,11 @@
  package acme.features.anonymous.task;
 
+import java.time.Instant;
+import java.util.Date;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.Assert;
 
 import acme.entities.Task;
 import acme.framework.components.Model;
@@ -41,6 +45,7 @@ public class AnonymousTaskShowService implements AbstractShowService<Anonymous, 
 		Integer id;
 		id = request.getModel().getInteger("id");
 		result = this.repository.findOnebyId(id);
+		Assert.state(result.getEnd().after(Date.from(Instant.now())) && result.getVisibility(), "default.error.not-authorised");
 
 		return result;
 	}
