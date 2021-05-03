@@ -16,7 +16,7 @@ authenticated.task.label.title = Title:
 authenticated.task.label.text = Text:
 authenticated.task.label.link = Link:
 authenticated.task.label.info = Information:
-authenticated.task.label.visibility= Visibility:
+authenticated.task.label.visibility= Public
 authenticated.task.label.workLoad= Workload:
 
 authenticated.task.button.create = Create

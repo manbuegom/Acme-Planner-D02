@@ -141,23 +141,13 @@
 		<property name="info" value="https://letdown.com" />
 	</bean>
 
-
-
-
-	<bean id="dashboard1" class="acme.entities.Dashboard">
-		<property name="numberOfFinishedTasks" value="5" />
-		<property name="numberOfPrivateTasks" value="8" />
-		<property name="numberOfPublicTasks" value="3" />
-		<property name="numberOfNonFinishedTasks" value="2" />
-	</bean>
-
 	<bean id="task01" class="acme.entities.Task">
 		<property name="start" value="2022/02/26 12:30" />
 		<property name="end" value="2022/03/02 12:30" />
 		<property name="title" value="Tarea de Juan José" />
 		<property name="text" value="Revisar las tareas de Pepe" />
 		<property name="link" value="https://pablete.com" />
-		<property name="visibility" value="false" />
+		<property name="visibility" value="true" />
 		<property name="workLoad" value="2.5" />
 	</bean>
 
