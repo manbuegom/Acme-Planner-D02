@@ -12,9 +12,10 @@ This is the Acme Planner project. This project is for deliverable #D02.
 
 We are going to produce this version of Starter Project following the requirements given by.
 
-This project implements the requirements for the C and B levels.
+This project implements the requirements for the levels C and B.
 
-GitHub´s link -> https://github.com/manbuegom/Acme-Planner-D02
+GitHub's repository link -> https://github.com/manbuegom/Acme-Planner-D02
+GitHub's release link -> https://github.com/manbuegom/Acme-Planner-D02/releases/tag/2.0
 
 CleverCloud:
 username:u9qprtqcrskwmgmw

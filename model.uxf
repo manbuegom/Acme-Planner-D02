@@ -370,7 +370,6 @@ Dashboard
 + maxWorklaod: Double
 + devWorkload: Double
 + avgPeriod: Double
-+ minPeriod: Double
 + maxPeriod: Double
 + minPeriod: Double
 + devPeriod: Double
